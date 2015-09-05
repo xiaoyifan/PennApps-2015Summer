@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98919A4F-D69D-4293-A369-A0C74C179DC1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HappyLearn</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>88F17830D486A1099552ABC8CA40556671A47EE8</key>
+		<string>https://github.com/Some-EdTech-PennApps-Team/adamant-weasel-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HappyLearn.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>88F17830D486A1099552ABC8CA40556671A47EE8</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Some-EdTech-PennApps-Team/adamant-weasel-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>88F17830D486A1099552ABC8CA40556671A47EE8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>88F17830D486A1099552ABC8CA40556671A47EE8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HappyLearn</string>
+		</dict>
+	</array>
+</dict>
+</plist>

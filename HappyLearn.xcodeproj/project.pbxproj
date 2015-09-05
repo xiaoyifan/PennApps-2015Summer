@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F9F6E57EFE49E395B777A9E /* libPods-HappyLearn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A81569C07B62B0D4E7A46A /* libPods-HappyLearn.a */; };
 		DD974B041B9A7D6E0028E225 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B031B9A7D6E0028E225 /* main.m */; };
 		DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B061B9A7D6E0028E225 /* AppDelegate.m */; };
 		DD974B0A1B9A7D6E0028E225 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B091B9A7D6E0028E225 /* ViewController.m */; };
@@ -16,7 +17,7 @@
 		DD974B1E1B9A7D6E0028E225 /* HappyLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B1D1B9A7D6E0028E225 /* HappyLearnTests.m */; };
 		DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B291B9A81710028E225 /* LPBannerView.m */; };
 		DD974B2C1B9A81710028E225 /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD974B2A1B9A81710028E225 /* LPBannerView.xib */; };
-		DD974B2F1B9A81BF0028E225 /* HLNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B2E1B9A81BF0028E225 /* HLNetworkingManager.m */; };
+		DD974B321B9A82950028E225 /* HLNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B311B9A82950028E225 /* HLNetworkingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11D098C8E6003DE060A1358F /* Pods-HappyLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyLearn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HappyLearn/Pods-HappyLearn.release.xcconfig"; sourceTree = "<group>"; };
+		21C998057B4BE6BE221F15C4 /* Pods-HappyLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyLearn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HappyLearn/Pods-HappyLearn.debug.xcconfig"; sourceTree = "<group>"; };
+		23A81569C07B62B0D4E7A46A /* libPods-HappyLearn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HappyLearn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD974AFE1B9A7D6E0028E225 /* HappyLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD974B021B9A7D6E0028E225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD974B031B9A7D6E0028E225 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,8 +50,8 @@
 		DD974B281B9A81710028E225 /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		DD974B291B9A81710028E225 /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
 		DD974B2A1B9A81710028E225 /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
-		DD974B2D1B9A81BF0028E225 /* HLNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLNetworkingManager.h; path = Banner/HLNetworkingManager.h; sourceTree = "<group>"; };
-		DD974B2E1B9A81BF0028E225 /* HLNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLNetworkingManager.m; path = Banner/HLNetworkingManager.m; sourceTree = "<group>"; };
+		DD974B301B9A82950028E225 /* HLNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNetworkingManager.h; sourceTree = "<group>"; };
+		DD974B311B9A82950028E225 /* HLNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNetworkingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9F6E57EFE49E395B777A9E /* libPods-HappyLearn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +73,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D50BEB9ED0849958C74459D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21C998057B4BE6BE221F15C4 /* Pods-HappyLearn.debug.xcconfig */,
+				11D098C8E6003DE060A1358F /* Pods-HappyLearn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F1930157A93C02C559A0107 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23A81569C07B62B0D4E7A46A /* libPods-HappyLearn.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD974AF51B9A7D6E0028E225 = {
 			isa = PBXGroup;
 			children = (
 				DD974B001B9A7D6E0028E225 /* HappyLearn */,
 				DD974B1A1B9A7D6E0028E225 /* HappyLearnTests */,
 				DD974AFF1B9A7D6E0028E225 /* Products */,
+				3D50BEB9ED0849958C74459D /* Pods */,
+				6F1930157A93C02C559A0107 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,8 +113,8 @@
 		DD974B001B9A7D6E0028E225 /* HappyLearn */ = {
 			isa = PBXGroup;
 			children = (
-				DD974B2D1B9A81BF0028E225 /* HLNetworkingManager.h */,
-				DD974B2E1B9A81BF0028E225 /* HLNetworkingManager.m */,
+				DD974B301B9A82950028E225 /* HLNetworkingManager.h */,
+				DD974B311B9A82950028E225 /* HLNetworkingManager.m */,
 				DD974B271B9A81710028E225 /* Banner */,
 				DD974B051B9A7D6E0028E225 /* AppDelegate.h */,
 				DD974B061B9A7D6E0028E225 /* AppDelegate.m */,
@@ -147,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD974B211B9A7D6E0028E225 /* Build configuration list for PBXNativeTarget "HappyLearn" */;
 			buildPhases = (
+				BA39256C254949BBC4D09565 /* Check Pods Manifest.lock */,
 				DD974AFA1B9A7D6E0028E225 /* Sources */,
 				DD974AFB1B9A7D6E0028E225 /* Frameworks */,
 				DD974AFC1B9A7D6E0028E225 /* Resources */,
+				01EE942FFBDCBE0C90A18ED8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +262,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01EE942FFBDCBE0C90A18ED8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HappyLearn/Pods-HappyLearn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA39256C254949BBC4D09565 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD974AFA1B9A7D6E0028E225 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -243,8 +302,8 @@
 			files = (
 				DD974B0A1B9A7D6E0028E225 /* ViewController.m in Sources */,
 				DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */,
-				DD974B2F1B9A81BF0028E225 /* HLNetworkingManager.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
+				DD974B321B9A82950028E225 /* HLNetworkingManager.m in Sources */,
 				DD974B041B9A7D6E0028E225 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +430,7 @@
 		};
 		DD974B221B9A7D6E0028E225 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C998057B4BE6BE221F15C4 /* Pods-HappyLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HappyLearn/Info.plist;
@@ -381,6 +441,7 @@
 		};
 		DD974B231B9A7D6E0028E225 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D098C8E6003DE060A1358F /* Pods-HappyLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HappyLearn/Info.plist;
@@ -442,6 +503,7 @@
 				DD974B231B9A7D6E0028E225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD974B241B9A7D6E0028E225 /* Build configuration list for PBXNativeTarget "HappyLearnTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +512,7 @@
 				DD974B261B9A7D6E0028E225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
