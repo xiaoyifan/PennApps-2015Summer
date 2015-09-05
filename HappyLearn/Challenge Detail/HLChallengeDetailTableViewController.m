@@ -9,7 +9,9 @@
 #import "HLChallengeDetailTableViewController.h"
 #import "HLChallengDetailTableViewCell.h"
 
-@interface HLChallengeDetailTableViewController ()
+@interface HLChallengeDetailTableViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+//@property (nonatomic, strong) UIImagePickerController *imagePicker;
 
 @end
 
@@ -19,7 +21,7 @@
     [super viewDidLoad];
     
     
-    self.tableView.estimatedRowHeight = 620.0;
+    self.tableView.estimatedRowHeight = 420.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
@@ -56,57 +58,39 @@
     
     [cell.challengeImageView loadInBackground];
     
+    cell.uploadPhotoButton.tag = 1;
+    
+    [cell.uploadPhotoButton addTarget:self action:@selector(uploadButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
 estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 620;
+    return 420;
+}
+
+- (void)uploadButtonClicked:(UIButton *)sender{
+    
+    UIImagePickerController *imagePicker = [UIImagePickerController new];
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:^{
+        
+        
+    }];
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark -  ImagePicker delegate
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"%@", info);
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)imagePickerControllerDidCancel:
+(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

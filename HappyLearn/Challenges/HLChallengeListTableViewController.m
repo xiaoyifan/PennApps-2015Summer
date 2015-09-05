@@ -150,7 +150,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kMainStoryBoardName bundle:nil];
     HLChallengeDetailTableViewController *challengeDetailVC = [storyboard instantiateViewControllerWithIdentifier:kChallengeDetailViewControllerIdentifier];
     
-    if (indexPath.row == HLChallengeTypeLive) {
+    if (indexPath.section == HLChallengeTypeLive) {
         challengeDetailVC.challenge = self.liveChallenges[indexPath.row];
     }
     else

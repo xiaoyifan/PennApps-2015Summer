@@ -205,10 +205,11 @@
         <scene sceneID="7D7-yY-6Kn">
             <objects>
                 <tableViewController storyboardIdentifier="challengeDetailVC" id="oUV-Ry-KiV" customClass="HLChallengeDetailTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="458" sectionHeaderHeight="22" sectionFooterHeight="22" id="ut6-ef-Iuw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="458" sectionHeaderHeight="22" sectionFooterHeight="22" id="ut6-ef-Iuw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="challengeDetailCell" rowHeight="458" id="u6g-fA-9Wi" customClass="HLChallengDetailTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -270,7 +271,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBF-lT-Ps7">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <state key="normal" title="Button">
+                                                    <state key="normal" title="upload a photo">
                                                         <color key="titleColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -407,10 +408,12 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="challengeImageView" destination="IPK-zh-FNb" id="UHK-2P-VeD"/>
                                     <outlet property="challengePromptTextLabel" destination="n5R-wg-XuL" id="S2P-Lf-VHE"/>
                                     <outlet property="challengeTitleLabel" destination="SAH-ti-lUC" id="tP0-bA-rjs"/>
+                                    <outlet property="uploadPhotoButton" destination="kBF-lT-Ps7" id="Kia-ah-uGh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

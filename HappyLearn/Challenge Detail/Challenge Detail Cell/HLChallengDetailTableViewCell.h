@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *challengePromptTextLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *uploadPhotoButton;
 
 
 @end
