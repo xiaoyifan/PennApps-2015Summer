@@ -8,10 +8,12 @@
 
 #import <Parse/Parse.h>
 
-@interface Channels : PFObject
+@interface Channel : NSObject<NSCoding>
 
 @property (nonatomic, strong) NSString *channelName;
 
 @property (nonatomic, strong) UIImage *channelImage;
+
+@property (strong,nonatomic) NSString *objectId;
 
 @end

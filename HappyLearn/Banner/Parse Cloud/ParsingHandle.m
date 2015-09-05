@@ -115,12 +115,18 @@
 //    }];
 //}
 
-- (Channels *)parseChannelToChannelObject:(PFObject *)object
+- (Channel *)parseChannelToChannelObject:(PFObject *)object
 {
-    Channels *retrivedObj = [[Channels alloc] init];
+    Channel *retrivedObj = [[Channel alloc] init];
     retrivedObj.channelName = [object objectForKey:@"channelName"];
-    retrivedObj.channelImage = [object objectForKey:@"channelImage"];
 
+    PFFile *userImageFile = [object objectForKey:@"channelImage"];
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            retrivedObj.channelImage = [UIImage imageWithData:imageData];
+        }
+    }];
+    
     retrivedObj.objectId = object.objectId;
 
     return retrivedObj;

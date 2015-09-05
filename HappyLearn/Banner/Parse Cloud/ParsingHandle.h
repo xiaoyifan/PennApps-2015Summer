@@ -24,7 +24,7 @@
 //-(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion;
 
 
--(Channels *)parseChannelToChannelObject:(PFObject *)object;
+-(Channel *)parseChannelToChannelObject:(PFObject *)object;
 
 -(void)getAllUsersToCompletion:(void (^)(NSArray *array))completion;
 

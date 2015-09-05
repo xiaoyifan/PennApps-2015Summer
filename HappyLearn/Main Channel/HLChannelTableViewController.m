@@ -13,7 +13,7 @@
 
 @interface HLChannelTableViewController ()
 
-@property (nonatomic, strong) NSArray *channels;
+@property (nonatomic, strong) NSMutableArray *channels;
 
 @end
 
@@ -45,9 +45,21 @@
     [SVProgressHUD show];
         [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
     
-            self.channels = array;
-            [self.tableView reloadData];
-            [SVProgressHUD dismiss];
+            self.channels = [NSMutableArray new];
+            for (PFObject *obj in array) {
+                Channel *channelObj = [[ParsingHandle sharedParsing] parseChannelToChannelObject:obj];
+                
+                [self.channels addObject:channelObj];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
+                [self.tableView reloadData];
+                [SVProgressHUD dismiss];
+                
+            });
+            
         }];
 }
 
@@ -67,7 +79,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HLChannelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"channelCell" forIndexPath:indexPath];
     
-    Channels *channel = [self.channels objectAtIndex:indexPath.row];
+    Channel *channel = [self.channels objectAtIndex:indexPath.row];
     cell.titleLabel.text = channel.channelName;
     cell.channelIconImageView.image = channel.channelImage;
     

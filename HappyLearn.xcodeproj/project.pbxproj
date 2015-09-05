@@ -34,7 +34,7 @@
 		DD974B601B9AAB750028E225 /* HLChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B5F1B9AAB750028E225 /* HLChannelTableViewController.m */; };
 		DD974B671B9AAC700028E225 /* HLChannelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B661B9AAC700028E225 /* HLChannelTableViewCell.m */; };
 		DD974B6B1B9AB6C30028E225 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B6A1B9AB6C30028E225 /* ParsingHandle.m */; };
-		DD974B6F1B9AC3FD0028E225 /* Channels.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B6E1B9AC3FD0028E225 /* Channels.m */; };
+		DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B6E1B9AC3FD0028E225 /* Channel.m */; };
 		DD974B711B9ACBDC0028E225 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD974B701B9ACBDC0028E225 /* ParseUI.framework */; };
 		DD974B771B9ACD760028E225 /* SCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B741B9ACD760028E225 /* SCLoginViewController.m */; };
 		DD974B781B9ACD760028E225 /* SCSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B761B9ACD760028E225 /* SCSignUpViewController.m */; };
@@ -94,8 +94,8 @@
 		DD974B661B9AAC700028E225 /* HLChannelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLChannelTableViewCell.m; path = ../../../../Documents/HLChannelTableViewCell.m; sourceTree = "<group>"; };
 		DD974B691B9AB6C30028E225 /* ParsingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingHandle.h; sourceTree = "<group>"; };
 		DD974B6A1B9AB6C30028E225 /* ParsingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHandle.m; sourceTree = "<group>"; };
-		DD974B6D1B9AC3FD0028E225 /* Channels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channels.h; sourceTree = "<group>"; };
-		DD974B6E1B9AC3FD0028E225 /* Channels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channels.m; sourceTree = "<group>"; };
+		DD974B6D1B9AC3FD0028E225 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		DD974B6E1B9AC3FD0028E225 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		DD974B701B9ACBDC0028E225 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		DD974B731B9ACD760028E225 /* SCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginViewController.h; sourceTree = "<group>"; };
 		DD974B741B9ACD760028E225 /* SCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginViewController.m; sourceTree = "<group>"; };
@@ -303,8 +303,8 @@
 		DD974B6C1B9AC3E00028E225 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD974B6D1B9AC3FD0028E225 /* Channels.h */,
-				DD974B6E1B9AC3FD0028E225 /* Channels.m */,
+				DD974B6D1B9AC3FD0028E225 /* Channel.h */,
+				DD974B6E1B9AC3FD0028E225 /* Channel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,7 +461,7 @@
 				DD974B781B9ACD760028E225 /* SCSignUpViewController.m in Sources */,
 				DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */,
 				DD974B6B1B9AB6C30028E225 /* ParsingHandle.m in Sources */,
-				DD974B6F1B9AC3FD0028E225 /* Channels.m in Sources */,
+				DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
 				DD974B671B9AAC700028E225 /* HLChannelTableViewCell.m in Sources */,
 				DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */,
