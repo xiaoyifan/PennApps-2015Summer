@@ -12,7 +12,7 @@
 
 @property (strong,nonatomic) NSString *challengeTitle;
 @property (strong,nonatomic) NSDate *expires;
-@property (strong,nonatomic) UIImage *promptImage;
+@property (strong,nonatomic) PFFile *promptImage;
 @property (strong,nonatomic) NSString *promptText;
 
 @end

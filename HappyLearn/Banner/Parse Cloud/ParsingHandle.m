@@ -262,12 +262,12 @@
     Channel *retrivedObj = [[Channel alloc] init];
     retrivedObj.channelName = [object objectForKey:@"channelName"];
     
-    PFFile *userImageFile = [object objectForKey:@"channelImage"];
-    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            retrivedObj.channelImage = [UIImage imageWithData:imageData];
-        }
-    }];
+    retrivedObj.channelImage = [object objectForKey:@"channelImage"];
+//    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+//        if (!error) {
+//            retrivedObj.channelImage = [UIImage imageWithData:imageData];
+//        }
+//    }];
     
     retrivedObj.objectId = object.objectId;
     

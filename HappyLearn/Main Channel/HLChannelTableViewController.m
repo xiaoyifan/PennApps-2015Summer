@@ -82,7 +82,9 @@
     
     Channel *channel = [self.channels objectAtIndex:indexPath.row];
     cell.titleLabel.text = channel.channelName;
-    cell.channelIconImageView.image = channel.channelImage;
+    cell.channelIconImageView.image = nil;
+    cell.channelIconImageView.file =  channel.channelImage;
+    [cell.channelIconImageView loadInBackground];
     cell.colorView.backgroundColor = [UIColor randomColor];
     return cell;
 }

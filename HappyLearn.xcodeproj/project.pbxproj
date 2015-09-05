@@ -203,10 +203,10 @@
 		DD974B001B9A7D6E0028E225 /* HappyLearn */ = {
 			isa = PBXGroup;
 			children = (
+				DD974B411B9A91930028E225 /* frameworks */,
 				DD974B3F1B9A8C580028E225 /* HLConstants.h */,
 				DD974B401B9A8DC80028E225 /* HLPrefixHeader.pch */,
 				DD974B6C1B9AC3E00028E225 /* Models */,
-				DD974B411B9A91930028E225 /* frameworks */,
 				DD974B381B9A8BC50028E225 /* Categories */,
 				DD974B331B9A8B040028E225 /* Networking Manager */,
 				DD974B681B9AB68C0028E225 /* Parse Cloud */,

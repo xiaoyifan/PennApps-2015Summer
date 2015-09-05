@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *challengeCountLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *channelIconImageView;
+@property (weak, nonatomic) IBOutlet PFImageView *channelIconImageView;
 
 @property (weak, nonatomic) IBOutlet UIView *colorView;
 

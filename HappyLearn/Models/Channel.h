@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *channelName;
 
-@property (nonatomic, strong) UIImage *channelImage;
+@property (nonatomic, strong) PFFile *channelImage;
 
 @property (strong,nonatomic) NSString *objectId;
 
