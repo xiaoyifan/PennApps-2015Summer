@@ -14,6 +14,9 @@
 		DD974B0F1B9A7D6E0028E225 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD974B0E1B9A7D6E0028E225 /* Images.xcassets */; };
 		DD974B121B9A7D6E0028E225 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD974B101B9A7D6E0028E225 /* LaunchScreen.xib */; };
 		DD974B1E1B9A7D6E0028E225 /* HappyLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B1D1B9A7D6E0028E225 /* HappyLearnTests.m */; };
+		DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B291B9A81710028E225 /* LPBannerView.m */; };
+		DD974B2C1B9A81710028E225 /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD974B2A1B9A81710028E225 /* LPBannerView.xib */; };
+		DD974B2F1B9A81BF0028E225 /* HLNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B2E1B9A81BF0028E225 /* HLNetworkingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		DD974B171B9A7D6E0028E225 /* HappyLearnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyLearnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD974B1C1B9A7D6E0028E225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD974B1D1B9A7D6E0028E225 /* HappyLearnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyLearnTests.m; sourceTree = "<group>"; };
+		DD974B281B9A81710028E225 /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
+		DD974B291B9A81710028E225 /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
+		DD974B2A1B9A81710028E225 /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
+		DD974B2D1B9A81BF0028E225 /* HLNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLNetworkingManager.h; path = Banner/HLNetworkingManager.h; sourceTree = "<group>"; };
+		DD974B2E1B9A81BF0028E225 /* HLNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLNetworkingManager.m; path = Banner/HLNetworkingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,9 @@
 		DD974B001B9A7D6E0028E225 /* HappyLearn */ = {
 			isa = PBXGroup;
 			children = (
+				DD974B2D1B9A81BF0028E225 /* HLNetworkingManager.h */,
+				DD974B2E1B9A81BF0028E225 /* HLNetworkingManager.m */,
+				DD974B271B9A81710028E225 /* Banner */,
 				DD974B051B9A7D6E0028E225 /* AppDelegate.h */,
 				DD974B061B9A7D6E0028E225 /* AppDelegate.m */,
 				DD974B081B9A7D6E0028E225 /* ViewController.h */,
@@ -117,6 +128,16 @@
 				DD974B1C1B9A7D6E0028E225 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD974B271B9A81710028E225 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				DD974B281B9A81710028E225 /* LPBannerView.h */,
+				DD974B291B9A81710028E225 /* LPBannerView.m */,
+				DD974B2A1B9A81710028E225 /* LPBannerView.xib */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +222,7 @@
 			files = (
 				DD974B0D1B9A7D6E0028E225 /* Main.storyboard in Resources */,
 				DD974B121B9A7D6E0028E225 /* LaunchScreen.xib in Resources */,
+				DD974B2C1B9A81710028E225 /* LPBannerView.xib in Resources */,
 				DD974B0F1B9A7D6E0028E225 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +243,8 @@
 			files = (
 				DD974B0A1B9A7D6E0028E225 /* ViewController.m in Sources */,
 				DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */,
+				DD974B2F1B9A81BF0028E225 /* HLNetworkingManager.m in Sources */,
+				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
 				DD974B041B9A7D6E0028E225 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
