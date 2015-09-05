@@ -2,7 +2,7 @@
 //  UIView+LoadNib.h
 //  LillyPulitzer
 //
-//  Created by Thibault Klein on 4/16/15.
+//  Created by Yifan Xiao on 4/16/15.
 //  Copyright (c) 2015 Prolific Interactive. All rights reserved.
 //
 

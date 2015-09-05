@@ -2,7 +2,7 @@
 //  LPNetworkingManager.h
 //  LillyPulitzer
 //
-//  Created by Thomas on 4/30/15.
+//  Created by Yifan Xiao on 4/30/15.
 //  Copyright (c) 2015 Prolific Interactive. All rights reserved.
 //
 
