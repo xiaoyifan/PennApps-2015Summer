@@ -10,4 +10,12 @@
 
 @interface HLChallengDetailTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *challengeTitleLabel;
+
+@property (weak, nonatomic) IBOutlet PFImageView *challengeImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *challengePromptTextLabel;
+
+
+
 @end

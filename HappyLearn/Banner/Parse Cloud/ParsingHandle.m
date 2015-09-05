@@ -281,12 +281,8 @@
     retrivedObj.expires = [object objectForKey:@"expires"];
     retrivedObj.promptText = [object objectForKey:@"promptText"];
     
-    PFFile *challengeImageFile = [object objectForKey:@"promptImage"];
-    [challengeImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            retrivedObj.promptImage = [UIImage imageWithData:imageData];
-        }
-    }];
+    retrivedObj.promptImage = [object objectForKey:@"promptImage"];
+    
 
     return retrivedObj;
 }

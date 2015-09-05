@@ -10,4 +10,6 @@
 
 @interface HLChallengeDetailTableViewController : UITableViewController
 
+@property (nonatomic, strong) Challenge *challenge;
+
 @end

@@ -8,6 +8,8 @@
 
 #import "HLChallengeListTableViewController.h"
 #import "HLChallengeTableViewCell.h"
+#import "HLChallengeDetailTableViewController.h"
+
 @interface HLChallengeListTableViewController ()
 
 @property (strong, nonatomic) NSMutableArray *liveChallenges;
@@ -145,6 +147,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kMainStoryBoardName bundle:nil];
+    HLChallengeDetailTableViewController *challengeDetailVC = [storyboard instantiateViewControllerWithIdentifier:kChallengeDetailViewControllerIdentifier];
+    
+    if (indexPath.row == HLChallengeTypeLive) {
+        challengeDetailVC.challenge = self.liveChallenges[indexPath.row];
+    }
+    else
+    {
+        challengeDetailVC.challenge = self.pastChallenges[indexPath.row];
+    }
+    
+    [self.navigationController pushViewController:challengeDetailVC animated:YES];
     
 }
 

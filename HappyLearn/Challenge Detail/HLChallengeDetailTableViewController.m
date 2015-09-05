@@ -7,6 +7,7 @@
 //
 
 #import "HLChallengeDetailTableViewController.h"
+#import "HLChallengDetailTableViewCell.h"
 
 @interface HLChallengeDetailTableViewController ()
 
@@ -17,16 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.estimatedRowHeight = 620.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -41,15 +44,26 @@
     return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    HLChallengDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kChallengeObjectDetailCellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.challengeTitleLabel.text = self.challenge.challengeTitle;
+    cell.challengePromptTextLabel.text = self.challenge.promptText;
+    
+    cell.challengeImageView.image = nil;
+    cell.challengeImageView.file = self.challenge.promptImage;
+    
+    [cell.challengeImageView loadInBackground];
     
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView
+estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 620;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -17,9 +17,10 @@ static NSString *const kMainStoryBoardName = @"Main";
 
 static NSString *const kChannelObjectCellIdentifier = @"channelCell";
 static NSString *const kChallengeObjectCellIdentifier = @"challengeObjectCell";
+static NSString *const kChallengeObjectDetailCellIdentifier = @"challengeDetailCell";
 
 #pragma mark - View Controller Identifier
 
 static NSString *const kChallengeListViewControllerIdentifier = @"challengeListViewController";
-
+static NSString *const kChallengeDetailViewControllerIdentifier = @"challengeDetailVC";
 #endif
