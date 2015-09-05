@@ -9,6 +9,8 @@
 #import "LPBannerView.h"
 #import "UIView+LoadNib.h"
 
+static CGFloat const kDefaultBannerAnimationDurationTime = 0.5;
+
 @interface LPBannerView ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

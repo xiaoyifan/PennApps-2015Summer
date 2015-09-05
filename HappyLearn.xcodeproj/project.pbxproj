@@ -17,7 +17,9 @@
 		DD974B1E1B9A7D6E0028E225 /* HappyLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B1D1B9A7D6E0028E225 /* HappyLearnTests.m */; };
 		DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B291B9A81710028E225 /* LPBannerView.m */; };
 		DD974B2C1B9A81710028E225 /* LPBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD974B2A1B9A81710028E225 /* LPBannerView.xib */; };
-		DD974B321B9A82950028E225 /* HLNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B311B9A82950028E225 /* HLNetworkingManager.m */; };
+		DD974B361B9A8B040028E225 /* HLNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B351B9A8B040028E225 /* HLNetworkingManager.m */; };
+		DD974B3D1B9A8BCF0028E225 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B3A1B9A8BCF0028E225 /* UIColor+CustomColors.m */; };
+		DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B3C1B9A8BCF0028E225 /* UIView+LoadNib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +52,14 @@
 		DD974B281B9A81710028E225 /* LPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPBannerView.h; sourceTree = "<group>"; };
 		DD974B291B9A81710028E225 /* LPBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPBannerView.m; sourceTree = "<group>"; };
 		DD974B2A1B9A81710028E225 /* LPBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPBannerView.xib; sourceTree = "<group>"; };
-		DD974B301B9A82950028E225 /* HLNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNetworkingManager.h; sourceTree = "<group>"; };
-		DD974B311B9A82950028E225 /* HLNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNetworkingManager.m; sourceTree = "<group>"; };
+		DD974B341B9A8B040028E225 /* HLNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNetworkingManager.h; sourceTree = "<group>"; };
+		DD974B351B9A8B040028E225 /* HLNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNetworkingManager.m; sourceTree = "<group>"; };
+		DD974B371B9A8B4A0028E225 /* HLPrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPrefixHeader.h; sourceTree = "<group>"; };
+		DD974B391B9A8BCF0028E225 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		DD974B3A1B9A8BCF0028E225 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		DD974B3B1B9A8BCF0028E225 /* UIView+LoadNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadNib.h"; sourceTree = "<group>"; };
+		DD974B3C1B9A8BCF0028E225 /* UIView+LoadNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadNib.m"; sourceTree = "<group>"; };
+		DD974B3F1B9A8C580028E225 /* HLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLConstants.h; path = ../HLConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +121,11 @@
 		DD974B001B9A7D6E0028E225 /* HappyLearn */ = {
 			isa = PBXGroup;
 			children = (
-				DD974B301B9A82950028E225 /* HLNetworkingManager.h */,
-				DD974B311B9A82950028E225 /* HLNetworkingManager.m */,
+				DD974B3F1B9A8C580028E225 /* HLConstants.h */,
+				DD974B371B9A8B4A0028E225 /* HLPrefixHeader.h */,
+				DD974B381B9A8BC50028E225 /* Categories */,
+				DD974B331B9A8B040028E225 /* Networking Manager */,
 				DD974B271B9A81710028E225 /* Banner */,
-				DD974B051B9A7D6E0028E225 /* AppDelegate.h */,
-				DD974B061B9A7D6E0028E225 /* AppDelegate.m */,
 				DD974B081B9A7D6E0028E225 /* ViewController.h */,
 				DD974B091B9A7D6E0028E225 /* ViewController.m */,
 				DD974B0B1B9A7D6E0028E225 /* Main.storyboard */,
@@ -131,6 +139,8 @@
 		DD974B011B9A7D6E0028E225 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD974B051B9A7D6E0028E225 /* AppDelegate.h */,
+				DD974B061B9A7D6E0028E225 /* AppDelegate.m */,
 				DD974B021B9A7D6E0028E225 /* Info.plist */,
 				DD974B031B9A7D6E0028E225 /* main.m */,
 			);
@@ -162,6 +172,26 @@
 				DD974B2A1B9A81710028E225 /* LPBannerView.xib */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		DD974B331B9A8B040028E225 /* Networking Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DD974B341B9A8B040028E225 /* HLNetworkingManager.h */,
+				DD974B351B9A8B040028E225 /* HLNetworkingManager.m */,
+			);
+			path = "Networking Manager";
+			sourceTree = "<group>";
+		};
+		DD974B381B9A8BC50028E225 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DD974B391B9A8BCF0028E225 /* UIColor+CustomColors.h */,
+				DD974B3A1B9A8BCF0028E225 /* UIColor+CustomColors.m */,
+				DD974B3B1B9A8BCF0028E225 /* UIView+LoadNib.h */,
+				DD974B3C1B9A8BCF0028E225 /* UIView+LoadNib.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,10 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD974B3D1B9A8BCF0028E225 /* UIColor+CustomColors.m in Sources */,
 				DD974B0A1B9A7D6E0028E225 /* ViewController.m in Sources */,
 				DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
-				DD974B321B9A82950028E225 /* HLNetworkingManager.m in Sources */,
+				DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */,
+				DD974B361B9A8B040028E225 /* HLNetworkingManager.m in Sources */,
 				DD974B041B9A7D6E0028E225 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +465,8 @@
 			baseConfigurationReference = 21C998057B4BE6BE221F15C4 /* Pods-HappyLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HappyLearn/HLPrefixHeader.h;
 				INFOPLIST_FILE = HappyLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +478,8 @@
 			baseConfigurationReference = 11D098C8E6003DE060A1358F /* Pods-HappyLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HappyLearn/HLPrefixHeader.h;
 				INFOPLIST_FILE = HappyLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
