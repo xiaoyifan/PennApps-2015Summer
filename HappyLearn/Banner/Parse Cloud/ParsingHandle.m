@@ -71,65 +71,22 @@
     }];
 }
 
-//- (void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:( void (^)() )completion
-//{
-//    [self insertNewObjectToDatabase:newObj createdBy:[PFUser currentUser] ToCompletion:completion];
-//}
-//
-//- (void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:( void (^)() )completion
-//{
-//    PFObject *event = [PFObject objectWithClassName:@"Events"];
-//
-//    event[@"title"] = newObj.title;
-//    event[@"time"] = newObj.time;
-//    event[@"reminderDate"]  = newObj.reminderDate;
-//
-//    PFGeoPoint *point = [PFGeoPoint geoPointWithLocation:newObj.location];
-//
-//    event[@"location"] = point;
-//    if (newObj.locationDescription.length == 0) {
-//        event[@"locationDescription"] = [NSNull null];
-//    }
-//    else{
-//     event[@"locationDescription"] = newObj.locationDescription;   
-//    }
-//    event[@"eventNote"] = newObj.eventNote;
-//
-//    [event setObject:user forKey:@"createdBy"];
-//
-//
-//    PFRelation *groupRelation = [event relationForKey:@"group"];
-//
-//    for (PFUser *user in newObj.group) {
-//        [groupRelation addObject:user];
-//    }
-//    [groupRelation addObject:[PFUser currentUser]];
-//
-//    [event saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
-//        if (!succeeded) {
-//            // The object has been saved.
-//            NSLog(@"%@", error);
-//        } else {
-//            completion();
-//        }
-//    }];
-//}
-
-- (Channel *)parseChannelToChannelObject:(PFObject *)object
-{
-    Channel *retrivedObj = [[Channel alloc] init];
-    retrivedObj.channelName = [object objectForKey:@"channelName"];
-
-    PFFile *userImageFile = [object objectForKey:@"channelImage"];
-    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-        if (!error) {
-            retrivedObj.channelImage = [UIImage imageWithData:imageData];
+-(void)getAllChallengesToCompletion:(void (^)(NSArray *))completion{
+    
+    if (![PFUser currentUser]) {
+        return;
+    }
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Challenge"];
+    
+    [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"error info %@", error);
+        } else {
+            completion(objects);
         }
     }];
     
-    retrivedObj.objectId = object.objectId;
-
-    return retrivedObj;
 }
 
 - (void)getAllUsersToCompletion:( void (^)(NSArray *array) )completion
@@ -297,6 +254,41 @@
     [user saveInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {
         completion(succeeded);
     }];
+}
+
+#pragma mark - Object Conversion.
+- (Channel *)parseChannelToChannelObject:(PFObject *)object
+{
+    Channel *retrivedObj = [[Channel alloc] init];
+    retrivedObj.channelName = [object objectForKey:@"channelName"];
+    
+    PFFile *userImageFile = [object objectForKey:@"channelImage"];
+    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            retrivedObj.channelImage = [UIImage imageWithData:imageData];
+        }
+    }];
+    
+    retrivedObj.objectId = object.objectId;
+    
+    return retrivedObj;
+}
+
+-(Challenge *)parseChallengeToChallengeObject: (PFObject *)object{
+    
+    Challenge *retrivedObj = [Challenge new];
+    retrivedObj.challengeTitle = [object objectForKey:@"challengeTitle"];
+    retrivedObj.expires = [object objectForKey:@"expires"];
+    retrivedObj.promptText = [object objectForKey:@"promptText"];
+    
+    PFFile *challengeImageFile = [object objectForKey:@"promptImage"];
+    [challengeImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+        if (!error) {
+            retrivedObj.promptImage = [UIImage imageWithData:imageData];
+        }
+    }];
+
+    return retrivedObj;
 }
 
 @end

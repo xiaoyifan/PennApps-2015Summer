@@ -10,6 +10,7 @@
 #import "SCSignUpViewController.h"
 #import "HLChannelTableViewController.h"
 #import "HLChannelTableViewCell.h"
+#import "HLChallengeListTableViewController.h"
 
 @interface HLChannelTableViewController ()
 
@@ -96,9 +97,9 @@
 - (void)showChallengesInfoViewInChannel:(Channel *)channel
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kMainStoryBoardName bundle:nil];
-//    SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
-//    [eventDetailVC setupWithEvent:eventObj];
-//    [self.navigationController pushViewController:eventDetailVC animated:YES];
+    HLChallengeListTableViewController *challengeListVC = [storyboard instantiateViewControllerWithIdentifier:kChallengeListViewControllerIdentifier];
+    challengeListVC.channel = channel;
+    [self.navigationController pushViewController:challengeListVC animated:YES];
 }
 
 /**

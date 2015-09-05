@@ -16,6 +16,7 @@
 #import <Bolts/Bolts.h>
 #import <ParseUI/ParseUI.h>
 #import "Channel.h"
+#import "Challenge.h"
 #import "ParsingHandle.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "HLConstants.h"

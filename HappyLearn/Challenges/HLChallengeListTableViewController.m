@@ -19,12 +19,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.tableView.estimatedRowHeight = 300.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [SVProgressHUD show];
+    [[ParsingHandle sharedParsing] getAllChallengesToCompletion:^(NSArray *array) {
+        self.liveChallenges = [NSMutableArray new];
+        self.pastChallenges = [NSMutableArray new];
+        
+        for (PFObject *obj in array) {
+            
+            Challenge *challenge = [[ParsingHandle sharedParsing] parseChallengeToChallengeObject:obj];
+            
+            if ([challenge.expires compare:[NSDate date]] == NSOrderedAscending) {
+             //the challenges are expired.
+                
+                [self.pastChallenges addObject:challenge];
+            }
+            else{
+             //the challenges are live.
+                [self.liveChallenges addObject:challenge];
+            }
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            [self.tableView reloadData];
+            [SVProgressHUD dismiss];
+            
+        });
+        
+    }];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,14 +77,46 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return 0;
+    NSInteger rowNumber = 0;
+    switch (section) {
+        case HLChallengeTypeLive:
+            rowNumber = self.liveChallenges.count;
+            break;
+        case HLChallengeTypePast:
+            rowNumber = self.pastChallenges.count;
+            break;
+        
+        default:
+            break;
+    }
+    
+    return rowNumber;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HLChallengeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kChallengeObjectCellIdentifier forIndexPath:indexPath];
+    Challenge *challenge = nil;
+    switch (indexPath.section) {
+        case HLChallengeTypeLive:
+        {
+            challenge = self.liveChallenges[indexPath.row];
+
+        }
+            break;
+        case HLChallengeTypePast:
+        {
+            challenge = self.pastChallenges[indexPath.row];
+
+        }
+            break;
+        default:
+            break;
+    }
     
-    // Configure the cell...
+    cell.challengeTitleLabel.text = challenge.challengeTitle;
+    cell.challengeDescriptionLabel.text = challenge.promptText;
+    
     
     return cell;
 }

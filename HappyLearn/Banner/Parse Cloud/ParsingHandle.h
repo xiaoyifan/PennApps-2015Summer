@@ -19,12 +19,7 @@
 
 -(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
 
-//-(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:(void (^)())completion;
-//
-//-(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion;
-
-
--(Channel *)parseChannelToChannelObject:(PFObject *)object;
+-(void)getAllChallengesToCompletion:( void (^)(NSArray *array))completion;
 
 -(void)getAllUsersToCompletion:(void (^)(NSArray *array))completion;
 
@@ -46,4 +41,7 @@
 
 //-(void)updateUser:(PFUser*)user Email:(NSString*)email ToCompletion:( void (^)(BOOL finished) )completion;
 
+
+-(Channel *)parseChannelToChannelObject:(PFObject *)object;
+-(Challenge *)parseChallengeToChallengeObject: (PFObject *)object;
 @end
