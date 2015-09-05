@@ -200,101 +200,6 @@
             </objects>
             <point key="canvasLocation" x="2061" y="147"/>
         </scene>
-        <!--ChallengeSingle-->
-        <scene sceneID="gUI-my-eY8">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k8E-YF-rMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="ChallengeSingle" id="ers-Hh-X9A" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nnl-FA-h2B"/>
-                        <viewControllerLayoutGuide type="bottom" id="U3B-9L-dlR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZQ5-8J-KM8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-Or-U0h">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="649"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4H-Dk-4Ei">
-                                        <rect key="frame" x="17" y="20" width="567" height="451"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="challengeTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adC-J7-RHr">
-                                                <rect key="frame" x="23" y="17" width="170" height="33"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUu-Rr-4mN">
-                                                <rect key="frame" x="23" y="58" width="536" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="185" id="RbD-2t-ebO"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="promptText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-hE-Tu6">
-                                                <rect key="frame" x="23" y="205" width="152" height="21"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qDF-a1-Om4">
-                                                <rect key="frame" x="39" y="262" width="284" height="42"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-jl-5XZ">
-                                                        <rect key="frame" x="119" y="6" width="104" height="36"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                        <state key="normal" title="Submit Photo">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.15294117647058825" green="0.16470588235294117" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="ke8-jl-5XZ" firstAttribute="top" secondItem="qDF-a1-Om4" secondAttribute="top" id="EYH-XK-sQb"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ke8-jl-5XZ" secondAttribute="bottom" id="ZXs-ZJ-hk1"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ke8-jl-5XZ" secondAttribute="trailing" id="s6n-gb-kpO"/>
-                                                    <constraint firstItem="ke8-jl-5XZ" firstAttribute="leading" secondItem="qDF-a1-Om4" secondAttribute="leading" id="wi7-VS-Xj5"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="SUu-Rr-4mN" firstAttribute="centerX" secondItem="Q4H-Dk-4Ei" secondAttribute="centerX" id="Qpl-fe-IIN"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-UU-lcC">
-                                        <rect key="frame" x="17" y="495" width="567" height="78"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed by" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-dr-4aR">
-                                                <rect key="frame" x="0.0" y="8" width="188" height="21"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Q4H-Dk-4Ei" firstAttribute="leading" secondItem="IGh-Or-U0h" secondAttribute="leading" constant="15" id="8wP-i5-vKT"/>
-                                    <constraint firstItem="Q4H-Dk-4Ei" firstAttribute="top" secondItem="IGh-Or-U0h" secondAttribute="top" constant="15" id="G5E-5A-wwG"/>
-                                    <constraint firstAttribute="bottom" secondItem="Q4H-Dk-4Ei" secondAttribute="bottom" constant="15" id="cIJ-Yn-Gx9"/>
-                                    <constraint firstAttribute="trailing" secondItem="Q4H-Dk-4Ei" secondAttribute="trailing" constant="15" id="zPR-kN-c1y"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="IGh-Or-U0h" firstAttribute="top" secondItem="ZQ5-8J-KM8" secondAttribute="topMargin" id="Kt9-vk-a6N"/>
-                            <constraint firstItem="U3B-9L-dlR" firstAttribute="top" secondItem="IGh-Or-U0h" secondAttribute="bottom" id="beq-jQ-1Ay"/>
-                            <constraint firstItem="IGh-Or-U0h" firstAttribute="leading" secondItem="ZQ5-8J-KM8" secondAttribute="leadingMargin" constant="-16" id="ezz-b1-9oF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IGh-Or-U0h" secondAttribute="trailing" constant="-16" id="ywh-GT-fp5"/>
-                        </constraints>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="2962" y="147"/>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="7D7-yY-6Kn">
             <objects>
@@ -324,8 +229,8 @@
                                                         <constraint firstAttribute="height" constant="185" id="xKG-o0-Ss4"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="promptText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uP-yj-Mtn">
-                                                    <rect key="frame" x="17" y="195" width="152" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="promptTextPlaceholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uP-yj-Mtn">
+                                                    <rect key="frame" x="17" y="195" width="177" height="24"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -403,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GH7-Pd-l8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="871"/>
+            <point key="canvasLocation" x="2720" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rsb-jC-ft7">
