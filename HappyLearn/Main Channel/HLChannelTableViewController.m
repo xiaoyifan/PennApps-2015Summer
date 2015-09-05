@@ -77,13 +77,28 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HLChannelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"channelCell" forIndexPath:indexPath];
+    HLChannelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kChannelObjectCellIdentifier forIndexPath:indexPath];
     
     Channel *channel = [self.channels objectAtIndex:indexPath.row];
     cell.titleLabel.text = channel.channelName;
     cell.channelIconImageView.image = channel.channelImage;
     
     return cell;
+}
+
+#pragma mark - Table View delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self showChallengesInfoViewInChannel:self.channels[indexPath.row]];
+}
+
+- (void)showChallengesInfoViewInChannel:(Channel *)channel
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kMainStoryBoardName bundle:nil];
+//    SCEventInfoViewController *eventDetailVC = [storyboard instantiateViewControllerWithIdentifier:@"eventDetailViewController"];
+//    [eventDetailVC setupWithEvent:eventObj];
+//    [self.navigationController pushViewController:eventDetailVC animated:YES];
 }
 
 /**
