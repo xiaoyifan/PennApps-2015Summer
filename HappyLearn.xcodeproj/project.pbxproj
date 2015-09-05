@@ -44,6 +44,8 @@
 		DD974B8D1B9B5E1C0028E225 /* YXGenericTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B8C1B9B5E1C0028E225 /* YXGenericTableViewController.m */; };
 		DD974B901B9B64D90028E225 /* UITableViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B8F1B9B64D90028E225 /* UITableViewController+Additions.m */; };
 		DD974B931B9B65250028E225 /* UIFont+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B921B9B65250028E225 /* UIFont+LPAdditions.m */; };
+		DD974B971B9B873D0028E225 /* HLChallengeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B961B9B873D0028E225 /* HLChallengeDetailTableViewController.m */; };
+		DD974B9B1B9B87900028E225 /* HLChallengDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B9A1B9B87900028E225 /* HLChallengDetailTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		DD974B8F1B9B64D90028E225 /* UITableViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+Additions.m"; sourceTree = "<group>"; };
 		DD974B911B9B65250028E225 /* UIFont+LPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+LPAdditions.h"; sourceTree = "<group>"; };
 		DD974B921B9B65250028E225 /* UIFont+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LPAdditions.m"; sourceTree = "<group>"; };
+		DD974B951B9B873D0028E225 /* HLChallengeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLChallengeDetailTableViewController.h; sourceTree = "<group>"; };
+		DD974B961B9B873D0028E225 /* HLChallengeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChallengeDetailTableViewController.m; sourceTree = "<group>"; };
+		DD974B991B9B87900028E225 /* HLChallengDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLChallengDetailTableViewCell.h; sourceTree = "<group>"; };
+		DD974B9A1B9B87900028E225 /* HLChallengDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChallengDetailTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 				DD974B721B9ACD760028E225 /* Login & Signup */,
 				DD974B5D1B9AAB3C0028E225 /* Main Channel */,
 				DD974B791B9B1D0A0028E225 /* Challenges */,
+				DD974B941B9B870C0028E225 /* Challenge Detail */,
 				DD974B0E1B9A7D6E0028E225 /* Images.xcassets */,
 				DD974B101B9A7D6E0028E225 /* LaunchScreen.xib */,
 				DD974B011B9A7D6E0028E225 /* Supporting Files */,
@@ -367,6 +374,25 @@
 			path = "../Challenges/Main Channel Cell";
 			sourceTree = "<group>";
 		};
+		DD974B941B9B870C0028E225 /* Challenge Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DD974B951B9B873D0028E225 /* HLChallengeDetailTableViewController.h */,
+				DD974B961B9B873D0028E225 /* HLChallengeDetailTableViewController.m */,
+				DD974B981B9B87790028E225 /* Challenge Detail Cell */,
+			);
+			path = "Challenge Detail";
+			sourceTree = "<group>";
+		};
+		DD974B981B9B87790028E225 /* Challenge Detail Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD974B991B9B87900028E225 /* HLChallengDetailTableViewCell.h */,
+				DD974B9A1B9B87900028E225 /* HLChallengDetailTableViewCell.m */,
+			);
+			path = "Challenge Detail Cell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -505,9 +531,11 @@
 			files = (
 				DD974B771B9ACD760028E225 /* SCLoginViewController.m in Sources */,
 				DD974B3D1B9A8BCF0028E225 /* UIColor+CustomColors.m in Sources */,
+				DD974B9B1B9B87900028E225 /* HLChallengDetailTableViewCell.m in Sources */,
 				DD974B781B9ACD760028E225 /* SCSignUpViewController.m in Sources */,
 				DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */,
 				DD974B7C1B9B208B0028E225 /* HLChallengeListTableViewController.m in Sources */,
+				DD974B971B9B873D0028E225 /* HLChallengeDetailTableViewController.m in Sources */,
 				DD974B6B1B9AB6C30028E225 /* ParsingHandle.m in Sources */,
 				DD974B831B9B2EC60028E225 /* Challenge.m in Sources */,
 				DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */,

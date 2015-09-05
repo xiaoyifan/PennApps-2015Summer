@@ -31,8 +31,6 @@
     
     [self setBackgroundBlur];
     
-    
-    
     [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getAllChallengesToCompletion:^(NSArray *array) {
         self.liveChallenges = [NSMutableArray new];
@@ -123,8 +121,7 @@
     
     cell.challengeTitleLabel.text = challenge.challengeTitle;
     cell.challengeDescriptionLabel.text = challenge.promptText;
-    
-    
+
     return cell;
 }
 
@@ -145,6 +142,11 @@
     return sectionName;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+}
 
 
 @end
