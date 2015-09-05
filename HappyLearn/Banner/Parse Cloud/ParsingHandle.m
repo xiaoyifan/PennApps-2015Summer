@@ -28,9 +28,8 @@
 
 - (void)findChannelsOfUser:(PFUser *)user ToCompletion:( void (^)(NSArray *array) )completion
 {
-    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Channel"];
-    [eventQuery whereKey:@"users" equalTo:user];
-
+    PFRelation *relation = [user relationForKey:@"memberOf"];
+    PFQuery *eventQuery = [relation query];
 
     [eventQuery findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
         if (!error) {

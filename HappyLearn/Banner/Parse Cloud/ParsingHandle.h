@@ -19,8 +19,6 @@
 
 -(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
 
--(NSArray *)findObjectsFromNativeCalendarOnDate:(NSDate *)date;
-
 //-(void)insertNewObjectToDatabase:(eventObject *)newObj createdBy:(PFUser *)user ToCompletion:(void (^)())completion;
 //
 //-(void)insertNewObjectToDatabase:(eventObject *)newObj ToCompletion:(void (^)())completion;
@@ -46,6 +44,6 @@
 
 -(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion;
 
--(void)updateUser:(PFUser*)user Email:(NSString*)email ToCompletion:( void (^)(BOOL finished) )completion;
+//-(void)updateUser:(PFUser*)user Email:(NSString*)email ToCompletion:( void (^)(BOOL finished) )completion;
 
 @end

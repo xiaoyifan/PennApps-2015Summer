@@ -10,4 +10,6 @@
 
 @implementation Channels
 
+@dynamic channelImage;
+@dynamic channelName;
 @end

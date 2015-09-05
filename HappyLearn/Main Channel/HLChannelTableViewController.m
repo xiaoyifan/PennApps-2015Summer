@@ -22,12 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
-//        
-//        self.channels = array;
-//    }];
+    [self loadChannelData];
     
-    self.channels = [NSArray new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,9 +40,12 @@
 /**
  *  query the data from Parse to load the table
  */
-- (void)loadDataEvents
+- (void)loadChannelData
 {
+        [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
     
+            self.channels = array;
+        }];
 }
 
 #pragma mark - Table view data source
@@ -122,7 +121,7 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    [self loadDataEvents];
+    [self loadChannelData];
     [self.tableView reloadData];
     
     if ([user[@"emailVerified"] isEqual:@1]) {
@@ -188,7 +187,7 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user
 {
     [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
-    [self loadDataEvents];
+    [self loadChannelData];
     
     if (user[@"emailVerified"] == false) {
         return;
