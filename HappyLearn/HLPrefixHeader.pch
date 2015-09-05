@@ -18,4 +18,7 @@
 #import <ParseUI/ParseUI.h>
 #import "Channels.h"
 #import "ParsingHandle.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+
+
 #endif

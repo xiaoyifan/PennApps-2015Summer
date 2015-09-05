@@ -42,9 +42,12 @@
  */
 - (void)loadChannelData
 {
+    [SVProgressHUD show];
         [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
     
             self.channels = array;
+            [self.tableView reloadData];
+            [SVProgressHUD dismiss];
         }];
 }
 
