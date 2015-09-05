@@ -40,6 +40,7 @@
 		DD974B7C1B9B208B0028E225 /* HLChallengeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B7B1B9B208B0028E225 /* HLChallengeListTableViewController.m */; };
 		DD974B801B9B20CD0028E225 /* HLChallengeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B7F1B9B20CD0028E225 /* HLChallengeTableViewCell.m */; };
 		DD974B831B9B2EC60028E225 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B821B9B2EC60028E225 /* Challenge.m */; };
+		DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B891B9B592E0028E225 /* HLChannelTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		DD974B7F1B9B20CD0028E225 /* HLChallengeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChallengeTableViewCell.m; sourceTree = "<group>"; };
 		DD974B811B9B2EC60028E225 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
 		DD974B821B9B2EC60028E225 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
+		DD974B881B9B592E0028E225 /* HLChannelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLChannelTableViewCell.h; sourceTree = "<group>"; };
+		DD974B891B9B592E0028E225 /* HLChannelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChannelTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +286,7 @@
 			children = (
 				DD974B5E1B9AAB750028E225 /* HLChannelTableViewController.h */,
 				DD974B5F1B9AAB750028E225 /* HLChannelTableViewController.m */,
+				DD974B871B9B59040028E225 /* Main Channel Cell */,
 			);
 			path = "Main Channel";
 			sourceTree = "<group>";
@@ -336,6 +340,16 @@
 				DD974B7F1B9B20CD0028E225 /* HLChallengeTableViewCell.m */,
 			);
 			path = "Challenge Object Cell";
+			sourceTree = "<group>";
+		};
+		DD974B871B9B59040028E225 /* Main Channel Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD974B881B9B592E0028E225 /* HLChannelTableViewCell.h */,
+				DD974B891B9B592E0028E225 /* HLChannelTableViewCell.m */,
+			);
+			name = "Main Channel Cell";
+			path = "../Challenges/Main Channel Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +495,7 @@
 				DD974B7C1B9B208B0028E225 /* HLChallengeListTableViewController.m in Sources */,
 				DD974B6B1B9AB6C30028E225 /* ParsingHandle.m in Sources */,
 				DD974B831B9B2EC60028E225 /* Challenge.m in Sources */,
+				DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */,
 				DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
 				DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */,

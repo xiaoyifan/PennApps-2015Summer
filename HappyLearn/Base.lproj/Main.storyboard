@@ -94,9 +94,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="challengeCountLabel" destination="6pW-8g-0sa" id="RF6-5X-w6j"/>
-                                    <outlet property="channelIconImageView" destination="PIp-8r-9KC" id="mkY-y4-Jd5"/>
-                                    <outlet property="titleLabel" destination="vyT-0w-K7r" id="cP4-hj-5LT"/>
+                                    <outlet property="challengeCountLabel" destination="6pW-8g-0sa" id="qou-dW-JjC"/>
+                                    <outlet property="channelIconImageView" destination="PIp-8r-9KC" id="3We-aW-Xxp"/>
+                                    <outlet property="titleLabel" destination="vyT-0w-K7r" id="Phb-6w-z65"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
