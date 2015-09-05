@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HLChannelTableViewController : UITableViewController
+@interface HLChannelTableViewController : UITableViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 
 
