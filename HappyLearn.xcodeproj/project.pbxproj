@@ -32,7 +32,6 @@
 		DD974B571B9A92560028E225 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD974B561B9A92560028E225 /* libsqlite3.dylib */; };
 		DD974B591B9A92E30028E225 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD974B581B9A92E30028E225 /* Bolts.framework */; };
 		DD974B601B9AAB750028E225 /* HLChannelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B5F1B9AAB750028E225 /* HLChannelTableViewController.m */; };
-		DD974B671B9AAC700028E225 /* HLChannelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B661B9AAC700028E225 /* HLChannelTableViewCell.m */; };
 		DD974B6B1B9AB6C30028E225 /* ParsingHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B6A1B9AB6C30028E225 /* ParsingHandle.m */; };
 		DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B6E1B9AC3FD0028E225 /* Channel.m */; };
 		DD974B711B9ACBDC0028E225 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD974B701B9ACBDC0028E225 /* ParseUI.framework */; };
@@ -93,8 +92,6 @@
 		DD974B581B9A92E30028E225 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DD974B5E1B9AAB750028E225 /* HLChannelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLChannelTableViewController.h; sourceTree = "<group>"; };
 		DD974B5F1B9AAB750028E225 /* HLChannelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChannelTableViewController.m; sourceTree = "<group>"; };
-		DD974B651B9AAC700028E225 /* HLChannelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLChannelTableViewCell.h; path = ../../../../Documents/HLChannelTableViewCell.h; sourceTree = "<group>"; };
-		DD974B661B9AAC700028E225 /* HLChannelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLChannelTableViewCell.m; path = ../../../../Documents/HLChannelTableViewCell.m; sourceTree = "<group>"; };
 		DD974B691B9AB6C30028E225 /* ParsingHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingHandle.h; sourceTree = "<group>"; };
 		DD974B6A1B9AB6C30028E225 /* ParsingHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHandle.m; sourceTree = "<group>"; };
 		DD974B6D1B9AC3FD0028E225 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
@@ -286,18 +283,8 @@
 			children = (
 				DD974B5E1B9AAB750028E225 /* HLChannelTableViewController.h */,
 				DD974B5F1B9AAB750028E225 /* HLChannelTableViewController.m */,
-				DD974B611B9AAB930028E225 /* Channel Cell */,
 			);
 			path = "Main Channel";
-			sourceTree = "<group>";
-		};
-		DD974B611B9AAB930028E225 /* Channel Cell */ = {
-			isa = PBXGroup;
-			children = (
-				DD974B651B9AAC700028E225 /* HLChannelTableViewCell.h */,
-				DD974B661B9AAC700028E225 /* HLChannelTableViewCell.m */,
-			);
-			path = "Channel Cell";
 			sourceTree = "<group>";
 		};
 		DD974B681B9AB68C0028E225 /* Parse Cloud */ = {
@@ -496,7 +483,6 @@
 				DD974B831B9B2EC60028E225 /* Challenge.m in Sources */,
 				DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
-				DD974B671B9AAC700028E225 /* HLChannelTableViewCell.m in Sources */,
 				DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */,
 				DD974B361B9A8B040028E225 /* HLNetworkingManager.m in Sources */,
 				DD974B041B9A7D6E0028E225 /* main.m in Sources */,
