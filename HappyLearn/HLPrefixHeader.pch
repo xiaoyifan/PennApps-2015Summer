@@ -20,5 +20,6 @@
 #import "ParsingHandle.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "HLConstants.h"
-
+#import "UIColor+CustomColors.h"
+#import "UIFont+LPAdditions.h"
 #endif

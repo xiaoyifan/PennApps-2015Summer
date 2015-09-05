@@ -16,5 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *channelIconImageView;
 
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 
 @end

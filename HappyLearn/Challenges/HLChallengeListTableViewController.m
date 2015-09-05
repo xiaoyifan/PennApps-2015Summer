@@ -19,12 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.tableView.estimatedRowHeight = 300.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+ 
+    [self setupNavigaionBarWithTitle:self.channel.channelName];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self setBackgroundBlur];
+    
+    
     
     [SVProgressHUD show];
     [[ParsingHandle sharedParsing] getAllChallengesToCompletion:^(NSArray *array) {

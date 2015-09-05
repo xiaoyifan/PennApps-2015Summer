@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HLChannelTableViewController : UITableViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+#import "YXGenericTableViewController.h"
+@interface HLChannelTableViewController : YXGenericTableViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 
 

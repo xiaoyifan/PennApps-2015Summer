@@ -47,7 +47,7 @@
                            alpha:1.f];
 }
 
-- (UIColor *)randomColor
++ (UIColor *)randomColor
 {
     NSArray *sliceColors = [NSArray arrayWithObjects:
                             

@@ -96,6 +96,7 @@
                                 <connections>
                                     <outlet property="challengeCountLabel" destination="6pW-8g-0sa" id="qou-dW-JjC"/>
                                     <outlet property="channelIconImageView" destination="PIp-8r-9KC" id="3We-aW-Xxp"/>
+                                    <outlet property="colorView" destination="w5J-ZQ-KVR" id="8Q4-ig-cig"/>
                                     <outlet property="titleLabel" destination="vyT-0w-K7r" id="Phb-6w-z65"/>
                                 </connections>
                             </tableViewCell>

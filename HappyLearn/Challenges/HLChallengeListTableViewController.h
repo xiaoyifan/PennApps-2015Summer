@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Yifan Xiao. All rights reserved.
 //
 #import "Channel.h"
-
+#import "YXGenericTableViewController.h"
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, HLChallengeType)
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, HLChallengeType)
     HLChallengeTypeCount
 };
 
-@interface HLChallengeListTableViewController : UITableViewController
+@interface HLChallengeListTableViewController : YXGenericTableViewController
 
 @property (strong, nonatomic) Channel *channel;
 

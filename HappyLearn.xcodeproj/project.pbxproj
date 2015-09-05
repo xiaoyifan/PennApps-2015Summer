@@ -41,6 +41,9 @@
 		DD974B801B9B20CD0028E225 /* HLChallengeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B7F1B9B20CD0028E225 /* HLChallengeTableViewCell.m */; };
 		DD974B831B9B2EC60028E225 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B821B9B2EC60028E225 /* Challenge.m */; };
 		DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B891B9B592E0028E225 /* HLChannelTableViewCell.m */; };
+		DD974B8D1B9B5E1C0028E225 /* YXGenericTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B8C1B9B5E1C0028E225 /* YXGenericTableViewController.m */; };
+		DD974B901B9B64D90028E225 /* UITableViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B8F1B9B64D90028E225 /* UITableViewController+Additions.m */; };
+		DD974B931B9B65250028E225 /* UIFont+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B921B9B65250028E225 /* UIFont+LPAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,12 @@
 		DD974B821B9B2EC60028E225 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		DD974B881B9B592E0028E225 /* HLChannelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLChannelTableViewCell.h; sourceTree = "<group>"; };
 		DD974B891B9B592E0028E225 /* HLChannelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChannelTableViewCell.m; sourceTree = "<group>"; };
+		DD974B8B1B9B5E1C0028E225 /* YXGenericTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGenericTableViewController.h; sourceTree = "<group>"; };
+		DD974B8C1B9B5E1C0028E225 /* YXGenericTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGenericTableViewController.m; sourceTree = "<group>"; };
+		DD974B8E1B9B64D90028E225 /* UITableViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+Additions.h"; sourceTree = "<group>"; };
+		DD974B8F1B9B64D90028E225 /* UITableViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+Additions.m"; sourceTree = "<group>"; };
+		DD974B911B9B65250028E225 /* UIFont+LPAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+LPAdditions.h"; sourceTree = "<group>"; };
+		DD974B921B9B65250028E225 /* UIFont+LPAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+LPAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +276,10 @@
 				DD974B3A1B9A8BCF0028E225 /* UIColor+CustomColors.m */,
 				DD974B3B1B9A8BCF0028E225 /* UIView+LoadNib.h */,
 				DD974B3C1B9A8BCF0028E225 /* UIView+LoadNib.m */,
+				DD974B8E1B9B64D90028E225 /* UITableViewController+Additions.h */,
+				DD974B8F1B9B64D90028E225 /* UITableViewController+Additions.m */,
+				DD974B911B9B65250028E225 /* UIFont+LPAdditions.h */,
+				DD974B921B9B65250028E225 /* UIFont+LPAdditions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -308,6 +321,8 @@
 				DD974B6E1B9AC3FD0028E225 /* Channel.m */,
 				DD974B811B9B2EC60028E225 /* Challenge.h */,
 				DD974B821B9B2EC60028E225 /* Challenge.m */,
+				DD974B8B1B9B5E1C0028E225 /* YXGenericTableViewController.h */,
+				DD974B8C1B9B5E1C0028E225 /* YXGenericTableViewController.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -498,10 +513,13 @@
 				DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */,
 				DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
+				DD974B931B9B65250028E225 /* UIFont+LPAdditions.m in Sources */,
+				DD974B901B9B64D90028E225 /* UITableViewController+Additions.m in Sources */,
 				DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */,
 				DD974B361B9A8B040028E225 /* HLNetworkingManager.m in Sources */,
 				DD974B041B9A7D6E0028E225 /* main.m in Sources */,
 				DD974B601B9AAB750028E225 /* HLChannelTableViewController.m in Sources */,
+				DD974B8D1B9B5E1C0028E225 /* YXGenericTableViewController.m in Sources */,
 				DD974B801B9B20CD0028E225 /* HLChallengeTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

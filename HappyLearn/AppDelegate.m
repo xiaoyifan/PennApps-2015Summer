@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HLNetworkingManager.h"
-
+#import "UIColor+CustomColors.h"
 @interface AppDelegate ()
 
 @end
@@ -31,7 +31,16 @@
     
      [HLNetworkingManager new];
     
+    [self setupAppearance];
+    
     return YES;
+}
+
+- (void)setupAppearance{
+    
+    // NavigationBar
+    [[UINavigationBar appearance] setTintColor:[UIColor customBlueColor]];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
