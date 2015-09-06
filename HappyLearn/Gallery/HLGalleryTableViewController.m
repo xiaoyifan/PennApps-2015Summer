@@ -22,6 +22,8 @@
     [self setupNavigaionBarWithTitle:@"Submissions"];
     
     self.challengeSubmissions = [NSArray new];
+
+    [self.navigationItem setHidesBackButton:YES animated:YES];
     
     [[ParsingHandle sharedParsing] getSubmissionsOfChallengeInID:self.channelId ToCompletion:^(NSArray *array) {
         
@@ -33,6 +35,12 @@
     self.tableView.tableHeaderView.frame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.tableView.frame), 60.0f);
     
 }
+
+- (IBAction)doneButtonPressed:(id)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
