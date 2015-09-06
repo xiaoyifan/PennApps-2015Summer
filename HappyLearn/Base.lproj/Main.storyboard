@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qXf-dQ-4u4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5HL-Xh-2PW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -431,7 +431,7 @@
         <scene sceneID="CNh-hM-Neb">
             <objects>
                 <tableViewController storyboardIdentifier="galleryVC" id="qXf-dQ-4u4" customClass="HLGalleryTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="290" sectionHeaderHeight="22" sectionFooterHeight="22" id="m2i-Yn-qJm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="290" sectionHeaderHeight="22" sectionFooterHeight="22" id="m2i-Yn-qJm">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -462,13 +462,15 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If6-Vg-XPB">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If6-Vg-XPB">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="25" id="ntr-Or-E4a"/>
+                                                <constraint firstAttribute="height" constant="25" id="ntr-Or-E4a">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                </constraint>
                                                 <constraint firstAttribute="width" constant="25" id="qN5-Mk-cK3"/>
                                             </constraints>
-                                            <state key="normal" title="B">
+                                            <state key="normal" image="empty_heart">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <variation key="default">
@@ -484,8 +486,34 @@
                                                 </mask>
                                             </variation>
                                         </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIQ-mA-Ys7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="PQB-ie-DfC">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                                </constraint>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="PQB-ie-DfC"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="PQB-ie-DfC"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vIQ-mA-Ys7" secondAttribute="bottom" constant="-8" id="1N8-K7-d1q">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
+                                        <constraint firstItem="vIQ-mA-Ys7" firstAttribute="leading" secondItem="HDM-YV-YBv" secondAttribute="leadingMargin" constant="-8" id="24h-he-SfQ">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
+                                        </constraint>
+                                        <constraint firstItem="vIQ-mA-Ys7" firstAttribute="top" secondItem="If6-Vg-XPB" secondAttribute="bottom" constant="0.5" id="6EF-KS-pSe"/>
                                         <constraint firstItem="If6-Vg-XPB" firstAttribute="trailing" secondItem="Ac8-vt-yPz" secondAttribute="trailing" id="7PX-38-oEQ"/>
                                         <constraint firstItem="B50-zI-RGQ" firstAttribute="centerY" secondItem="If6-Vg-XPB" secondAttribute="centerY" id="Bso-9H-frD"/>
                                         <constraint firstItem="B50-zI-RGQ" firstAttribute="leading" secondItem="Ac8-vt-yPz" secondAttribute="leading" id="LO6-AL-2JD"/>
@@ -494,6 +522,9 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Ac8-vt-yPz" secondAttribute="trailing" constant="18" id="Rqb-bw-7Jr"/>
                                         <constraint firstItem="If6-Vg-XPB" firstAttribute="top" secondItem="Ac8-vt-yPz" secondAttribute="bottom" constant="5" id="UZK-4s-NKZ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="If6-Vg-XPB" secondAttribute="bottom" constant="5.5" id="dYo-eD-Oh4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vIQ-mA-Ys7" secondAttribute="trailing" constant="-8" id="eGe-or-TF5">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="-15"/>
+                                        </constraint>
                                         <constraint firstItem="Ac8-vt-yPz" firstAttribute="leading" secondItem="HDM-YV-YBv" secondAttribute="leadingMargin" constant="18" id="fwe-cn-Uow"/>
                                         <constraint firstItem="Ac8-vt-yPz" firstAttribute="top" secondItem="HDM-YV-YBv" secondAttribute="topMargin" id="qre-LN-bVk"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="B50-zI-RGQ" secondAttribute="bottom" constant="5.5" id="sJq-sJ-3mb"/>
@@ -503,6 +534,7 @@
                                             <exclude reference="Ac8-vt-yPz"/>
                                             <exclude reference="B50-zI-RGQ"/>
                                             <exclude reference="If6-Vg-XPB"/>
+                                            <exclude reference="vIQ-mA-Ys7"/>
                                         </mask>
                                         <mask key="constraints">
                                             <exclude reference="Rqb-bw-7Jr"/>
@@ -512,6 +544,10 @@
                                             <exclude reference="LO6-AL-2JD"/>
                                             <exclude reference="REx-VD-rII"/>
                                             <exclude reference="sJq-sJ-3mb"/>
+                                            <exclude reference="1N8-K7-d1q"/>
+                                            <exclude reference="24h-he-SfQ"/>
+                                            <exclude reference="6EF-KS-pSe"/>
+                                            <exclude reference="eGe-or-TF5"/>
                                             <exclude reference="7PX-38-oEQ"/>
                                             <exclude reference="OEi-h9-gp6"/>
                                             <exclude reference="UZK-4s-NKZ"/>
@@ -523,6 +559,7 @@
                                             <include reference="Ac8-vt-yPz"/>
                                             <include reference="B50-zI-RGQ"/>
                                             <include reference="If6-Vg-XPB"/>
+                                            <include reference="vIQ-mA-Ys7"/>
                                         </mask>
                                         <mask key="constraints">
                                             <include reference="Rqb-bw-7Jr"/>
@@ -532,15 +569,20 @@
                                             <include reference="LO6-AL-2JD"/>
                                             <include reference="REx-VD-rII"/>
                                             <include reference="sJq-sJ-3mb"/>
+                                            <exclude reference="1N8-K7-d1q"/>
+                                            <include reference="24h-he-SfQ"/>
+                                            <include reference="6EF-KS-pSe"/>
+                                            <include reference="eGe-or-TF5"/>
                                             <include reference="7PX-38-oEQ"/>
                                             <include reference="OEi-h9-gp6"/>
-                                            <include reference="UZK-4s-NKZ"/>
-                                            <include reference="dYo-eD-Oh4"/>
+                                            <exclude reference="UZK-4s-NKZ"/>
+                                            <exclude reference="dYo-eD-Oh4"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="authorNameLabel" destination="B50-zI-RGQ" id="nKF-yb-xTd"/>
+                                    <outlet property="separatorView" destination="vIQ-mA-Ys7" id="PZO-HE-TkT"/>
                                     <outlet property="submissionImageView" destination="Ac8-vt-yPz" id="ixW-wJ-QUD"/>
                                 </connections>
                             </tableViewCell>
@@ -575,6 +617,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="empty_heart" width="33" height="28"/>
         <image name="main_cell_angle" width="10" height="21"/>
     </resources>
 </document>

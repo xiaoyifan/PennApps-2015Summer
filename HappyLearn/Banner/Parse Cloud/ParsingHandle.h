@@ -45,6 +45,8 @@
 
 -(void)getAllSubmissionsToCompletion:(void (^)(NSArray *array))completion;
 
+- (void)getSubmissionsOfChallengeInID:(NSString *)challengeID ToCompletion:(void (^)(NSArray *array))completion;
+
 -(Channel *)parseChannelToChannelObject:(PFObject *)object;
 -(Challenge *)parseChallengeToChallengeObject: (PFObject *)object;
 @end

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HLGalleryTableViewController : UITableViewController
+#import "YXGenericTableViewController.h"
+@interface HLGalleryTableViewController : YXGenericTableViewController
 
 @property (nonatomic, strong) NSString *channelId;
 

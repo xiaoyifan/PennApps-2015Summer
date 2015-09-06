@@ -297,6 +297,36 @@
     
 }
 
+- (void)getSubmissionsOfChallengeInID:(NSString *)challengeID ToCompletion:(void (^)(NSArray *array))completion{
+    
+    PFQuery *chaQuery = [PFQuery queryWithClassName:@"Challenge"];
+    [chaQuery getObjectInBackgroundWithId:challengeID
+                                 block: ^(PFObject *challenge, NSError *error) {
+
+                                     PFQuery *query = [PFQuery queryWithClassName:@"ChallengeSubmission"];
+                                     [query whereKey:@"challenge" equalTo:challenge];
+                                     [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
+                                     
+                                         
+                                         NSMutableArray *returnArray = [NSMutableArray new];
+                                         
+                                         for (PFObject *obj in objects) {
+                                             ChallengeSubmission *submission = [self parseChallengeSubmissionToChallengeSubmissionObject:obj];
+                                             [returnArray addObject:submission];
+                                         }
+                                         completion(returnArray);
+                                     }];
+  
+                                     
+                                     
+                                     
+                                     
+                                     
+                                 }];
+    
+    
+}
+
 #pragma mark - Object Conversion.
 - (Channel *)parseChannelToChannelObject:(PFObject *)object
 {
@@ -329,9 +359,9 @@
     retrivedObj.objectId = object.objectId;
     retrivedObj.submissionImage = [object objectForKey:@"submissionImage"];
     retrivedObj.user = [object objectForKey:@"user"];
-//    PFObject *challenge = [object objectForKey:@"challenge"];
-//    retrivedObj.challenge = [self parseChallengeToChallengeObject:challenge];
-    
+
+    PFUser *postedUser = [PFQuery getUserObjectWithId:retrivedObj.user.objectId];
+    retrivedObj.user = postedUser;
     return retrivedObj;
 }
 

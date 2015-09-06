@@ -19,12 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupNavigaionBarWithTitle:@"Submissions"];
+    
     self.challengeSubmissions = [NSArray new];
-    [[ParsingHandle sharedParsing] getAllSubmissionsToCompletion:^(NSArray *array) {
-       
+    
+    [[ParsingHandle sharedParsing] getSubmissionsOfChallengeInID:self.channelId ToCompletion:^(NSArray *array) {
+        
         self.challengeSubmissions = array;
         [self.tableView reloadData];
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,8 +59,10 @@
     cell.submissionImageView.file = submission.submissionImage;
     [cell.submissionImageView loadInBackground];
     
-    //cell.authorNameLabel.text = submission.user.username;
+    PFUser *user = submission.user;
+    cell.authorNameLabel.text = user.username;
     
+    cell.separatorView.backgroundColor = [UIColor randomColor];
     return cell;
 }
 

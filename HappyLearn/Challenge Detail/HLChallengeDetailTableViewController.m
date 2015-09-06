@@ -101,7 +101,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [[ParsingHandle sharedParsing] uploadSubmission:imageData InChallengeWithID:self.challenge.objectId WithCompletion:^{
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kMainStoryBoardName bundle:nil];
-        HLGalleryTableViewController *galleryListVC = [storyboard instantiateViewControllerWithIdentifier:kChallengeListViewControllerIdentifier];
+        HLGalleryTableViewController *galleryListVC = [storyboard instantiateViewControllerWithIdentifier:kGalleryViewControllerIdentifier];
         galleryListVC.channelId = self.challenge.objectId;
         [self.navigationController pushViewController:galleryListVC animated:YES];
         

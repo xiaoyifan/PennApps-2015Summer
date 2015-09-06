@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *authorNameLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *separatorView;
+
 @end
