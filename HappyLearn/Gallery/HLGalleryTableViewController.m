@@ -29,6 +29,9 @@
         [self.tableView reloadData];
     }];
     
+//    //self.tableView.tableHeaderView = self.mapController.mapView;
+    self.tableView.tableHeaderView.frame = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.tableView.frame), 60.0f);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +65,6 @@
     PFUser *user = submission.user;
     cell.authorNameLabel.text = user.username;
     
-    cell.separatorView.backgroundColor = [UIColor randomColor];
     return cell;
 }
 

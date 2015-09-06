@@ -132,8 +132,6 @@
  */
 - (void)handleLogginAndSignUp
 {
-    PFUser *user = [PFUser currentUser];
-    
     if ( (![PFUser currentUser])) {
         // No user logged in
         // Create the log in view controller
