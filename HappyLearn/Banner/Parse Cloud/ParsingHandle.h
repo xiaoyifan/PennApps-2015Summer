@@ -19,6 +19,8 @@
 
 -(void)findObjectsofDate:(NSDate *)date ToCompletion:(void (^)(NSArray *array))completion;
 
+-(void)getChallengesWithChannelID:(NSString *)channelID ToCompletion:(void (^)(NSArray *))completion;
+
 -(void)getAllChallengesToCompletion:( void (^)(NSArray *array))completion;
 
 -(void)getAllUsersToCompletion:(void (^)(NSArray *array))completion;

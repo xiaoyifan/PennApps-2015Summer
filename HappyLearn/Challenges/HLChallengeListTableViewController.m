@@ -34,7 +34,8 @@
     [self setBackgroundBlur];
     
     [SVProgressHUD show];
-    [[ParsingHandle sharedParsing] getAllChallengesToCompletion:^(NSArray *array) {
+    
+    [[ParsingHandle sharedParsing] getChallengesWithChannelID:self.channel.objectId ToCompletion:^(NSArray *array) {
         self.liveChallenges = [NSMutableArray new];
         self.pastChallenges = [NSMutableArray new];
         
@@ -43,18 +44,18 @@
             Challenge *challenge = [[ParsingHandle sharedParsing] parseChallengeToChallengeObject:obj];
             
             if ([challenge.expires compare:[NSDate date]] == NSOrderedAscending) {
-             //the challenges are expired.
+                //the challenges are expired.
                 
                 [self.pastChallenges addObject:challenge];
             }
             else{
-             //the challenges are live.
+                //the challenges are live.
                 [self.liveChallenges addObject:challenge];
             }
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-
+            
             [self.tableView reloadData];
             [SVProgressHUD dismiss];
             
@@ -108,13 +109,14 @@
         case HLChallengeTypeLive:
         {
             challenge = self.liveChallenges[indexPath.row];
-
+            NSInteger number = [self hoursBetween:[NSDate date] and:challenge.expires];
+            cell.timeCounterLabel.text = [NSString stringWithFormat:@"%d Hours Left", number];
         }
             break;
         case HLChallengeTypePast:
         {
             challenge = self.pastChallenges[indexPath.row];
-
+            cell.timeCounterLabel.text = @"expired";
         }
             break;
         default:
@@ -125,6 +127,13 @@
     cell.challengeDescriptionLabel.text = challenge.promptText;
 
     return cell;
+}
+
+- (NSInteger)hoursBetween:(NSDate *)firstDate and:(NSDate *)secondDate {
+    NSUInteger unitFlags = NSCalendarUnitHour;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:firstDate toDate:secondDate options:0];
+    return [components hour]+1;
 }
 
 

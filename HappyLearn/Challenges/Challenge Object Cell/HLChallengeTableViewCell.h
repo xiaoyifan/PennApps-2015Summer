@@ -14,7 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *challengeDescriptionLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *presentButton;
-
+@property (weak, nonatomic) IBOutlet UILabel *timeCounterLabel;
 
 @end

@@ -71,6 +71,29 @@
     }];
 }
 
+-(void)getChallengesWithChannelID:(NSString *)channelID ToCompletion:(void (^)(NSArray *))completion{
+    
+    if (![PFUser currentUser]) {
+        return;
+    }
+    
+    PFQuery *chaQuery = [PFQuery queryWithClassName:@"Channel"];
+    [chaQuery getObjectInBackgroundWithId:channelID
+                                    block: ^(PFObject *channel, NSError *error) {
+                                        
+                                        PFQuery *query = [PFQuery queryWithClassName:@"Challenge"];
+                                        [query whereKey:@"channel" equalTo:channel];
+                                        [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
+                                            if (error) {
+                                                NSLog(@"error info %@", error);
+                                            } else {
+                                                completion(objects);
+                                            }
+                                        }];
+                                        
+                                    }];
+}
+
 -(void)getAllChallengesToCompletion:(void (^)(NSArray *))completion{
     
     if (![PFUser currentUser]) {

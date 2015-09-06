@@ -188,6 +188,7 @@
                                 <connections>
                                     <outlet property="challengeDescriptionLabel" destination="V5T-1v-Mp0" id="oCA-19-Cuy"/>
                                     <outlet property="challengeTitleLabel" destination="Nv8-lj-kZc" id="SjP-LC-XlH"/>
+                                    <outlet property="timeCounterLabel" destination="MUU-Ce-sws" id="92N-ga-chM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
