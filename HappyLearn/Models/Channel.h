@@ -16,4 +16,6 @@
 
 @property (strong,nonatomic) NSString *objectId;
 
+@property (strong ,nonatomic) NSNumber* count;
+
 @end

@@ -38,6 +38,13 @@
     
 }
 
+- (IBAction)exitButtonTapped:(id)sender {
+ 
+    [PFUser logOut];
+    
+    [self handleLogginAndSignUp];
+}
+
 /**
  *  query the data from Parse to load the table
  */
@@ -47,26 +54,8 @@
     if (![PFUser currentUser]) {
         return;
     }
-    [SVProgressHUD show];
-//        [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
-//    
-//            self.channels = [NSMutableArray new];
-//            for (PFObject *obj in array) {
-//                Channel *channelObj = [[ParsingHandle sharedParsing] parseChannelToChannelObject:obj];
-//                
-//                [self.channels addObject:channelObj];
-//            }
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                
-//                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
-//                [self.tableView reloadData];
-//                [SVProgressHUD dismiss];
-//                
-//            });
-//            
-//        }];
     
+    [SVProgressHUD show];    
     
         [[ParsingHandle sharedParsing] findAllChannelsToCompletion:^(NSArray *array) {
             
@@ -105,10 +94,15 @@
     
     Channel *channel = [self.channels objectAtIndex:indexPath.row];
     cell.titleLabel.text = channel.channelName;
+    
     cell.channelIconImageView.image = nil;
     cell.channelIconImageView.file =  channel.channelImage;
     [cell.channelIconImageView loadInBackground];
+    
     cell.colorView.backgroundColor = [UIColor randomColor];
+    
+    cell.challengeCountLabel.text = [NSString stringWithFormat:@"%@ Challenges", channel.count];
+    
     return cell;
 }
 

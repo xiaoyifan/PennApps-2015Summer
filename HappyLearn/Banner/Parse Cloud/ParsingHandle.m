@@ -26,11 +26,9 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Channel"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-
+       
         completion(objects);
-        
     }];
-
 }
 
 - (void)findChannelsOfCurrentUserToCompletion:( void (^)(NSArray *) )completion
@@ -371,6 +369,8 @@
     retrivedObj.channelImage = [object objectForKey:@"channelImage"];
     
     retrivedObj.objectId = object.objectId;
+    
+    retrivedObj.count = [object objectForKey:@"count"];
     
     return retrivedObj;
 }

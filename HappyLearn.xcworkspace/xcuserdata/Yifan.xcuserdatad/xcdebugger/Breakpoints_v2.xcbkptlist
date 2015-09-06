@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HappyLearn/Banner/Parse Cloud/ParsingHandle.m"
-            timestampString = "463209318.773624"
+            timestampString = "463215201.751566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "-uploadSubmission:ofUser:InChallengeWithID:WithCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HappyLearn/Banner/Parse Cloud/ParsingHandle.m"
-            timestampString = "463209318.773624"
+            timestampString = "463215201.751566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "-getAllSubmissionsToCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HappyLearn/Banner/Parse Cloud/ParsingHandle.m"
-            timestampString = "463209318.773624"
+            timestampString = "463215201.751566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "-getAllSubmissionsToCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HappyLearn/Banner/Parse Cloud/ParsingHandle.m"
-            timestampString = "463209318.773624"
+            timestampString = "463215201.751566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "-getAllSubmissionsToCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HappyLearn/Banner/Parse Cloud/ParsingHandle.m"
-            timestampString = "463209318.773624"
+            timestampString = "463215707.993622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "393"

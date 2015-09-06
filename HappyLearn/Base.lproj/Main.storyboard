@@ -107,7 +107,14 @@
                             <outlet property="delegate" destination="TUa-zU-t51" id="ERp-gE-btQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Channels" id="mwM-83-jhZ"/>
+                    <navigationItem key="navigationItem" title="Channels" id="mwM-83-jhZ">
+                        <barButtonItem key="leftBarButtonItem" image="exit_icon" id="465-zQ-qyI">
+                            <color key="tintColor" red="0.13333334029999999" green="0.75686281919999998" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="exitButtonTapped:" destination="TUa-zU-t51" id="rdA-uf-35P"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9BR-kf-PXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -722,6 +729,7 @@
     <resources>
         <image name="check_mark" width="27" height="27"/>
         <image name="empty_heart" width="33" height="28"/>
+        <image name="exit_icon" width="32" height="32"/>
         <image name="main_cell_angle" width="10" height="21"/>
     </resources>
 </document>

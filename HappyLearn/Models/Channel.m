@@ -16,7 +16,7 @@
     [encoder encodeObject:self.channelName forKey:@"channelName"];
     [encoder encodeObject:self.channelImage forKey:@"channelImage"];
     [encoder encodeObject:self.objectId forKey:@"objectId"];
-
+    [encoder encodeObject:self.count forKey:@"count"];
 }
 
 //implement the decoding method
@@ -26,7 +26,7 @@
     self.channelImage = [decoder decodeObjectForKey:@"channelImage"];
     self.channelName = [decoder decodeObjectForKey:@"channelName"];
     self.objectId = [decoder decodeObjectForKey:@"objectId"];
-    
+    self.count = [decoder decodeObjectForKey:@"count"];
     return self;
 }
 
