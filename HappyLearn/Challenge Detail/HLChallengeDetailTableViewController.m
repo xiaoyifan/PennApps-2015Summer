@@ -31,6 +31,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+
     [self.tableView reloadData];
 }
 
@@ -73,6 +74,14 @@ estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)uploadButtonClicked:(UIButton *)sender{
     
     UIImagePickerController *imagePicker = [UIImagePickerController new];
+//    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:
+//                              UIImagePickerControllerSourceTypeCamera];
+    
+    // Hides the controls for moving & scaling pictures, or for
+    // trimming movies. To instead show the controls, use YES.
+    imagePicker.allowsEditing = NO;
+    
     imagePicker.delegate = self;
     [self presentViewController:imagePicker animated:YES completion:^{
         
@@ -85,7 +94,16 @@ estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"%@", info);
+    
+    
+    NSData *imageData = UIImageJPEGRepresentation([info objectForKey:UIImagePickerControllerOriginalImage], 0.5f);
+    
+    [[ParsingHandle sharedParsing] uploadSubmission:imageData InChallengeWithID:self.challenge.objectId WithCompletion:^{
+        
+        
+        
+    }];
+    
 }
 
 - (void)imagePickerControllerDidCancel:

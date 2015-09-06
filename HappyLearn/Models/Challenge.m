@@ -17,6 +17,7 @@
     [encoder encodeObject:self.expires forKey:@"expires"];
     [encoder encodeObject:self.promptImage forKey:@"promptImage"];
     [encoder encodeObject:self.promptText forKey:@"promptText"];
+    [encoder encodeObject:self.objectId forKey:@"objectId"];
 }
 
 //implement the decoding method
@@ -27,7 +28,8 @@
     self.expires = [decoder decodeObjectForKey:@"expires"];
     self.promptText = [decoder decodeObjectForKey:@"promptText"];
     self.promptImage = [decoder decodeObjectForKey:@"promptImage"];
-
+    self.objectId = [decoder decodeObjectForKey:@"objectId"];
+    
     return self;
 }
 

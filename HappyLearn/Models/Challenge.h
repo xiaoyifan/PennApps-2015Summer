@@ -14,5 +14,6 @@
 @property (strong,nonatomic) NSDate *expires;
 @property (strong,nonatomic) PFFile *promptImage;
 @property (strong,nonatomic) NSString *promptText;
+@property (strong, nonatomic) NSString *objectId;
 
 @end

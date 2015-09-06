@@ -256,6 +256,30 @@
     }];
 }
 
+- (void)uploadSubmission:(NSData *)imageData InChallengeWithID:(NSString *)challengeID WithCompletion:(void (^)())completion{
+    
+    [self uploadSubmission:imageData ofUser:[PFUser currentUser] InChallengeWithID:challengeID WithCompletion:completion];
+}
+
+- (void)uploadSubmission:(NSData *)imageData ofUser:(PFUser *)user InChallengeWithID: (NSString *)challengeID WithCompletion:(void (^)())completion{
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Challenge"];
+    PFObject *object = [query getObjectWithId:challengeID];
+    
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    [imageFile save];
+    
+    PFObject *submission = [PFObject objectWithClassName:@"ChallengeSubmission"];
+    [submission setObject:imageFile             forKey:@"submissionImage"];
+    [submission setObject:object forKey:@"challenge"];
+    [submission setObject:user forKey:@"user"];
+    
+    [submission saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        
+        completion();
+    }];
+}
+
 #pragma mark - Object Conversion.
 - (Channel *)parseChannelToChannelObject:(PFObject *)object
 {
@@ -282,6 +306,7 @@
     retrivedObj.promptText = [object objectForKey:@"promptText"];
     
     retrivedObj.promptImage = [object objectForKey:@"promptImage"];
+    retrivedObj.objectId = object.objectId;
     
 
     return retrivedObj;

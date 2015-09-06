@@ -39,8 +39,9 @@
 
 -(void)deleteEventFromCloudByID:(NSString *)objectId ToCompletion:(void (^)())completion;
 
-//-(void)updateUser:(PFUser*)user Email:(NSString*)email ToCompletion:( void (^)(BOOL finished) )completion;
+- (void)uploadSubmission:(NSData *)imageData InChallengeWithID:(NSString *)challengeID WithCompletion:(void (^)())completion;
 
+- (void)uploadSubmission:(NSData *)imageData ofUser:(PFUser *)user InChallengeWithID: (NSString *)challengeID WithCompletion:(void (^)())completion;
 
 -(Channel *)parseChannelToChannelObject:(PFObject *)object;
 -(Challenge *)parseChallengeToChallengeObject: (PFObject *)object;
