@@ -49,6 +49,9 @@
 		DD974B9F1B9BC6DA0028E225 /* HLGalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B9E1B9BC6DA0028E225 /* HLGalleryTableViewController.m */; };
 		DD974BAA1B9BCBDB0028E225 /* HLGalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974BA91B9BCBDB0028E225 /* HLGalleryTableViewCell.m */; };
 		DD974BAD1B9BD9190028E225 /* ChallengeSubmission.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974BAC1B9BD9190028E225 /* ChallengeSubmission.m */; };
+		DD974BB61B9C226B0028E225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD974BB31B9C226B0028E225 /* ViewController.swift */; };
+		DD974BB71B9C226B0028E225 /* RMParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD974BB41B9C226B0028E225 /* RMParallaxItem.swift */; };
+		DD974BB81B9C226B0028E225 /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD974BB51B9C226B0028E225 /* RMParallax.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +137,10 @@
 		DD974BA91B9BCBDB0028E225 /* HLGalleryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGalleryTableViewCell.m; sourceTree = "<group>"; };
 		DD974BAB1B9BD9190028E225 /* ChallengeSubmission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeSubmission.h; sourceTree = "<group>"; };
 		DD974BAC1B9BD9190028E225 /* ChallengeSubmission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeSubmission.m; sourceTree = "<group>"; };
+		DD974BB21B9C226A0028E225 /* HappyLearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HappyLearn-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD974BB31B9C226B0028E225 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD974BB41B9C226B0028E225 /* RMParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallaxItem.swift; sourceTree = "<group>"; };
+		DD974BB51B9C226B0028E225 /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMParallax.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +225,7 @@
 		DD974B001B9A7D6E0028E225 /* HappyLearn */ = {
 			isa = PBXGroup;
 			children = (
+				DD974BB11B9C22500028E225 /* Splash Screen */,
 				DD974B411B9A91930028E225 /* frameworks */,
 				DD974B3F1B9A8C580028E225 /* HLConstants.h */,
 				DD974B401B9A8DC80028E225 /* HLPrefixHeader.pch */,
@@ -424,6 +432,17 @@
 			path = "Gallery Cell";
 			sourceTree = "<group>";
 		};
+		DD974BB11B9C22500028E225 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DD974BB31B9C226B0028E225 /* ViewController.swift */,
+				DD974BB41B9C226B0028E225 /* RMParallaxItem.swift */,
+				DD974BB51B9C226B0028E225 /* RMParallax.swift */,
+				DD974BB21B9C226A0028E225 /* HappyLearn-Bridging-Header.h */,
+			);
+			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -567,10 +586,13 @@
 				DD974B9B1B9B87900028E225 /* HLChallengDetailTableViewCell.m in Sources */,
 				DD974B781B9ACD760028E225 /* SCSignUpViewController.m in Sources */,
 				DD974B071B9A7D6E0028E225 /* AppDelegate.m in Sources */,
+				DD974BB61B9C226B0028E225 /* ViewController.swift in Sources */,
 				DD974B7C1B9B208B0028E225 /* HLChallengeListTableViewController.m in Sources */,
 				DD974B971B9B873D0028E225 /* HLChallengeDetailTableViewController.m in Sources */,
+				DD974BB81B9C226B0028E225 /* RMParallax.swift in Sources */,
 				DD974B6B1B9AB6C30028E225 /* ParsingHandle.m in Sources */,
 				DD974B831B9B2EC60028E225 /* Challenge.m in Sources */,
+				DD974BB71B9C226B0028E225 /* RMParallaxItem.swift in Sources */,
 				DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */,
 				DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */,
 				DD974BAD1B9BD9190028E225 /* ChallengeSubmission.m in Sources */,
@@ -712,6 +734,7 @@
 			baseConfigurationReference = 21C998057B4BE6BE221F15C4 /* Pods-HappyLearn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -724,6 +747,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HappyLearn/Splash Screen/HappyLearn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -732,6 +757,7 @@
 			baseConfigurationReference = 11D098C8E6003DE060A1358F /* Pods-HappyLearn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -744,6 +770,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HappyLearn/Splash Screen/HappyLearn-Bridging-Header.h";
 			};
 			name = Release;
 		};

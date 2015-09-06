@@ -23,4 +23,5 @@
 #import "UIColor+CustomColors.h"
 #import "UIFont+LPAdditions.h"
 #import "ChallengeSubmission.h"
+#import "HappyLearn-Swift.h"
 #endif

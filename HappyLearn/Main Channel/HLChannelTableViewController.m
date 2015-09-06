@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSMutableArray *channels;
 
+@property (retain, nonatomic) ViewController *vc;
+
 @end
 
 @implementation HLChannelTableViewController
@@ -23,8 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadChannelData];
+    self.vc = [[ViewController alloc] init];
+    [self presentViewController:self.vc animated:NO completion:nil];
+    [self.view addSubview:self.vc.view];
     
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self loadChannelData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,8 +62,6 @@
         return;
     }
     
-    [SVProgressHUD show];    
-    
         [[ParsingHandle sharedParsing] findAllChannelsToCompletion:^(NSArray *array) {
             
             self.channels = [NSMutableArray new];
@@ -70,7 +75,6 @@
                 
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
                 [self.tableView reloadData];
-                [SVProgressHUD dismiss];
                 
             });
         }];
