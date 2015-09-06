@@ -43,9 +43,33 @@
  */
 - (void)loadChannelData
 {
-    [SVProgressHUD show];
-        [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
     
+    if (![PFUser currentUser]) {
+        return;
+    }
+    [SVProgressHUD show];
+//        [[ParsingHandle sharedParsing] findChannelsOfCurrentUserToCompletion:^(NSArray *array) {
+//    
+//            self.channels = [NSMutableArray new];
+//            for (PFObject *obj in array) {
+//                Channel *channelObj = [[ParsingHandle sharedParsing] parseChannelToChannelObject:obj];
+//                
+//                [self.channels addObject:channelObj];
+//            }
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                
+//                [[NSNotificationCenter defaultCenter] postNotificationName:@"tableViewdidLoad" object:self];
+//                [self.tableView reloadData];
+//                [SVProgressHUD dismiss];
+//                
+//            });
+//            
+//        }];
+    
+    
+        [[ParsingHandle sharedParsing] findAllChannelsToCompletion:^(NSArray *array) {
+            
             self.channels = [NSMutableArray new];
             for (PFObject *obj in array) {
                 Channel *channelObj = [[ParsingHandle sharedParsing] parseChannelToChannelObject:obj];
@@ -60,7 +84,6 @@
                 [SVProgressHUD dismiss];
                 
             });
-            
         }];
 }
 
@@ -111,7 +134,7 @@
 {
     PFUser *user = [PFUser currentUser];
     
-    if ( (![PFUser currentUser]) || (user[@"emailVerified"] == false) ) {
+    if ( (![PFUser currentUser])) {
         // No user logged in
         // Create the log in view controller
         SCLoginViewController *logInViewController = [[SCLoginViewController alloc] init];
@@ -157,16 +180,13 @@
     [self loadChannelData];
     [self.tableView reloadData];
     
-    if ([user[@"emailVerified"] isEqual:@1]) {
+    
         PFInstallation *installation = [PFInstallation currentInstallation];
         installation[@"user"] = [PFUser currentUser];
         [installation saveInBackground];
         
         [self dismissViewControllerAnimated:YES completion:NULL];
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verification Required" message:@"please verify your email first" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-    }
+   
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -221,10 +241,6 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
     [self loadChannelData];
-    
-    if (user[@"emailVerified"] == false) {
-        return;
-    }
     
     [self.tableView reloadData];
 }

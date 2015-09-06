@@ -41,6 +41,10 @@
     // NavigationBar
     [[UINavigationBar appearance] setTintColor:[UIColor customBlueColor]];
     
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{ NSFontAttributeName: [UIFont fontWithName:@"Avenir-Book" size:16.0f],
+                                                            NSForegroundColorAttributeName: [UIColor customGrayColor] }
+                                                forState:UIControlStateNormal];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

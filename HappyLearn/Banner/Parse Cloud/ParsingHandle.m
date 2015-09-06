@@ -21,6 +21,18 @@
     return shared;
 }
 
+-(void)findAllChannelsToCompletion:(void(^)(NSArray *array))completion
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Channel"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+
+        completion(objects);
+        
+    }];
+
+}
+
 - (void)findChannelsOfCurrentUserToCompletion:( void (^)(NSArray *) )completion
 {
     [self findChannelsOfUser:[PFUser currentUser] ToCompletion:completion];

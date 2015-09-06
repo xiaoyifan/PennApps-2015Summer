@@ -12,6 +12,7 @@
 
 +(id)sharedParsing;
 
+-(void)findAllChannelsToCompletion:(void(^)(NSArray *array))completion;
 
 -(void)findChannelsOfCurrentUserToCompletion:(void(^)(NSArray *array))completion;
 

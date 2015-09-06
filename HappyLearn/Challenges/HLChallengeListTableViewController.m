@@ -101,6 +101,11 @@
     return rowNumber;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 40.0f;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HLChallengeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kChallengeObjectCellIdentifier forIndexPath:indexPath];
@@ -110,7 +115,7 @@
         {
             challenge = self.liveChallenges[indexPath.row];
             NSInteger number = [self hoursBetween:[NSDate date] and:challenge.expires];
-            cell.timeCounterLabel.text = [NSString stringWithFormat:@"%d Hours Left", number];
+            cell.timeCounterLabel.text = [NSString stringWithFormat:@"%ld Hours Left", (long)number];
         }
             break;
         case HLChallengeTypePast:
