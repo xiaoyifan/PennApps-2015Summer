@@ -280,6 +280,23 @@
     }];
 }
 
+-(void)getAllSubmissionsToCompletion:(void (^)(NSArray *array))completion{
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"ChallengeSubmission"];
+    
+    [query findObjectsInBackgroundWithBlock: ^(NSArray *objects, NSError *error) {
+       
+        NSMutableArray *returnArray = [NSMutableArray new];
+        
+        for (PFObject *obj in objects) {
+            ChallengeSubmission *submission = [self parseChallengeSubmissionToChallengeSubmissionObject:obj];
+            [returnArray addObject:submission];
+        }
+        completion(returnArray);
+    }];
+    
+}
+
 #pragma mark - Object Conversion.
 - (Channel *)parseChannelToChannelObject:(PFObject *)object
 {
@@ -287,11 +304,6 @@
     retrivedObj.channelName = [object objectForKey:@"channelName"];
     
     retrivedObj.channelImage = [object objectForKey:@"channelImage"];
-//    [userImageFile getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
-//        if (!error) {
-//            retrivedObj.channelImage = [UIImage imageWithData:imageData];
-//        }
-//    }];
     
     retrivedObj.objectId = object.objectId;
     
@@ -307,8 +319,19 @@
     
     retrivedObj.promptImage = [object objectForKey:@"promptImage"];
     retrivedObj.objectId = object.objectId;
-    
 
+    return retrivedObj;
+}
+
+-(ChallengeSubmission *)parseChallengeSubmissionToChallengeSubmissionObject:(PFObject *)object{
+    ChallengeSubmission *retrivedObj = [ChallengeSubmission new];
+    
+    retrivedObj.objectId = object.objectId;
+    retrivedObj.submissionImage = [object objectForKey:@"submissionImage"];
+    retrivedObj.user = [object objectForKey:@"user"];
+//    PFObject *challenge = [object objectForKey:@"challenge"];
+//    retrivedObj.challenge = [self parseChallengeToChallengeObject:challenge];
+    
     return retrivedObj;
 }
 

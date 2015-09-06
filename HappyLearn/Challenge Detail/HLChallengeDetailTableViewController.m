@@ -8,7 +8,7 @@
 
 #import "HLChallengeDetailTableViewController.h"
 #import "HLChallengDetailTableViewCell.h"
-
+#import "HLGalleryTableViewController.h"
 @interface HLChallengeDetailTableViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 //@property (nonatomic, strong) UIImagePickerController *imagePicker;
@@ -100,7 +100,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     [[ParsingHandle sharedParsing] uploadSubmission:imageData InChallengeWithID:self.challenge.objectId WithCompletion:^{
         
-        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:kMainStoryBoardName bundle:nil];
+        HLGalleryTableViewController *galleryListVC = [storyboard instantiateViewControllerWithIdentifier:kChallengeListViewControllerIdentifier];
+        galleryListVC.channelId = self.challenge.objectId;
+        [self.navigationController pushViewController:galleryListVC animated:YES];
         
     }];
     

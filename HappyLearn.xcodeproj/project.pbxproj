@@ -46,6 +46,9 @@
 		DD974B931B9B65250028E225 /* UIFont+LPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B921B9B65250028E225 /* UIFont+LPAdditions.m */; };
 		DD974B971B9B873D0028E225 /* HLChallengeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B961B9B873D0028E225 /* HLChallengeDetailTableViewController.m */; };
 		DD974B9B1B9B87900028E225 /* HLChallengDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B9A1B9B87900028E225 /* HLChallengDetailTableViewCell.m */; };
+		DD974B9F1B9BC6DA0028E225 /* HLGalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974B9E1B9BC6DA0028E225 /* HLGalleryTableViewController.m */; };
+		DD974BAA1B9BCBDB0028E225 /* HLGalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974BA91B9BCBDB0028E225 /* HLGalleryTableViewCell.m */; };
+		DD974BAD1B9BD9190028E225 /* ChallengeSubmission.m in Sources */ = {isa = PBXBuildFile; fileRef = DD974BAC1B9BD9190028E225 /* ChallengeSubmission.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,12 @@
 		DD974B961B9B873D0028E225 /* HLChallengeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChallengeDetailTableViewController.m; sourceTree = "<group>"; };
 		DD974B991B9B87900028E225 /* HLChallengDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLChallengDetailTableViewCell.h; sourceTree = "<group>"; };
 		DD974B9A1B9B87900028E225 /* HLChallengDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLChallengDetailTableViewCell.m; sourceTree = "<group>"; };
+		DD974B9D1B9BC6DA0028E225 /* HLGalleryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGalleryTableViewController.h; sourceTree = "<group>"; };
+		DD974B9E1B9BC6DA0028E225 /* HLGalleryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGalleryTableViewController.m; sourceTree = "<group>"; };
+		DD974BA81B9BCBDB0028E225 /* HLGalleryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLGalleryTableViewCell.h; sourceTree = "<group>"; };
+		DD974BA91B9BCBDB0028E225 /* HLGalleryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLGalleryTableViewCell.m; sourceTree = "<group>"; };
+		DD974BAB1B9BD9190028E225 /* ChallengeSubmission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeSubmission.h; sourceTree = "<group>"; };
+		DD974BAC1B9BD9190028E225 /* ChallengeSubmission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeSubmission.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +231,7 @@
 				DD974B5D1B9AAB3C0028E225 /* Main Channel */,
 				DD974B791B9B1D0A0028E225 /* Challenges */,
 				DD974B941B9B870C0028E225 /* Challenge Detail */,
+				DD974B9C1B9BC66B0028E225 /* Gallery */,
 				DD974B0E1B9A7D6E0028E225 /* Images.xcassets */,
 				DD974B101B9A7D6E0028E225 /* LaunchScreen.xib */,
 				DD974B011B9A7D6E0028E225 /* Supporting Files */,
@@ -330,6 +340,8 @@
 				DD974B821B9B2EC60028E225 /* Challenge.m */,
 				DD974B8B1B9B5E1C0028E225 /* YXGenericTableViewController.h */,
 				DD974B8C1B9B5E1C0028E225 /* YXGenericTableViewController.m */,
+				DD974BAB1B9BD9190028E225 /* ChallengeSubmission.h */,
+				DD974BAC1B9BD9190028E225 /* ChallengeSubmission.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,6 +403,25 @@
 				DD974B9A1B9B87900028E225 /* HLChallengDetailTableViewCell.m */,
 			);
 			path = "Challenge Detail Cell";
+			sourceTree = "<group>";
+		};
+		DD974B9C1B9BC66B0028E225 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				DD974BA71B9BCBDB0028E225 /* Gallery Cell */,
+				DD974B9D1B9BC6DA0028E225 /* HLGalleryTableViewController.h */,
+				DD974B9E1B9BC6DA0028E225 /* HLGalleryTableViewController.m */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		DD974BA71B9BCBDB0028E225 /* Gallery Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD974BA81B9BCBDB0028E225 /* HLGalleryTableViewCell.h */,
+				DD974BA91B9BCBDB0028E225 /* HLGalleryTableViewCell.m */,
+			);
+			path = "Gallery Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD974BAA1B9BCBDB0028E225 /* HLGalleryTableViewCell.m in Sources */,
 				DD974B771B9ACD760028E225 /* SCLoginViewController.m in Sources */,
 				DD974B3D1B9A8BCF0028E225 /* UIColor+CustomColors.m in Sources */,
 				DD974B9B1B9B87900028E225 /* HLChallengDetailTableViewCell.m in Sources */,
@@ -540,10 +572,12 @@
 				DD974B831B9B2EC60028E225 /* Challenge.m in Sources */,
 				DD974B8A1B9B592E0028E225 /* HLChannelTableViewCell.m in Sources */,
 				DD974B6F1B9AC3FD0028E225 /* Channel.m in Sources */,
+				DD974BAD1B9BD9190028E225 /* ChallengeSubmission.m in Sources */,
 				DD974B2B1B9A81710028E225 /* LPBannerView.m in Sources */,
 				DD974B931B9B65250028E225 /* UIFont+LPAdditions.m in Sources */,
 				DD974B901B9B64D90028E225 /* UITableViewController+Additions.m in Sources */,
 				DD974B3E1B9A8BCF0028E225 /* UIView+LoadNib.m in Sources */,
+				DD974B9F1B9BC6DA0028E225 /* HLGalleryTableViewController.m in Sources */,
 				DD974B361B9A8B040028E225 /* HLNetworkingManager.m in Sources */,
 				DD974B041B9A7D6E0028E225 /* main.m in Sources */,
 				DD974B601B9AAB750028E225 /* HLChannelTableViewController.m in Sources */,

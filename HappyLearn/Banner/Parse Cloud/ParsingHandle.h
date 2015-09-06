@@ -43,6 +43,8 @@
 
 - (void)uploadSubmission:(NSData *)imageData ofUser:(PFUser *)user InChallengeWithID: (NSString *)challengeID WithCompletion:(void (^)())completion;
 
+-(void)getAllSubmissionsToCompletion:(void (^)(NSArray *array))completion;
+
 -(Channel *)parseChannelToChannelObject:(PFObject *)object;
 -(Challenge *)parseChallengeToChallengeObject: (PFObject *)object;
 @end

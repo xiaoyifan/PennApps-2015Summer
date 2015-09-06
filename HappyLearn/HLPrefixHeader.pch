@@ -22,4 +22,5 @@
 #import "HLConstants.h"
 #import "UIColor+CustomColors.h"
 #import "UIFont+LPAdditions.h"
+#import "ChallengeSubmission.h"
 #endif
